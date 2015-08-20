@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Franklin Clark</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+
+    html, body {height:100%;}
+
+    body {background-color:#000;}
+
+    .page-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+    }
+
+    .hero .avatar {
+      margin-bottom: 1rem;
+    }
+
+    .hide {
+      display:none;
+      visibility: hidden;
+    }
+    
+    .profile-list {
+      margin:0 auto;
+      padding:0;
+      width: 7rem;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow:row;
+      justify-content: space-between;
+    }
+
+    .profile { list-style: none; }
+
+    .profile a {transition: color 0.2s ease;}
+    .profile a:link { color: #333;}
+    .profile a:visited { color: #333;}
+    .profile a:hover { color: orangered;}
+    .profile a:active { color:orangered;}
+
+    .ico {
+      font-size: 2em;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div role="main" class="page-container">
+    <figure class="hero">
+      <a href="http://github.com/ffffranklin">
+        <svg class="avatar" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" xml:space="preserve" width="300px">
+          <defs>
+            <circle id="circle" cx="150" cy="150" r="150" />
+          </defs>
+          <clipPath id="clip">
+            <use xlink:href="#circle" overflow="visible"></use>
+          </clipPath>
+          <g clip-path="url(#clip)">
+            <image overflow="visible" width="300" height="300" xlink:href="https://avatars2.githubusercontent.com/u/1546561?v=3&s=300"></image>
+          </g>
+        </svg>
+      </a>
+      <figcaption>
+        <ul class="profile-list">
+          <li class="profile">
+            <a href="https://github.com/ffffranklin" target="_blank">
+              <i class="ico fa fa-github"></i>
+            </a>
+          </li>
+          <li class="profile">
+            <a href="https://twitter.com/_ffffranklin" target="_blank">
+              <i class="ico fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="profile">
+            <a href="https://www.linkedin.com/in/franklinclark" target="_blank">
+              <i class="ico fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </figcaption>
+    </figure>
+  </div>
+</body>
+</html>
