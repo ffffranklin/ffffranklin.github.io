@@ -10,8 +10,6 @@ url: "http://ffffrankl.in" # the base hostname & protocol for your site
 permalink:   /blog/:title/
 twitter_username: _ffffranklin
 github_username: ffffranklin
-source: site
-destination: site/_site
 
 # Build settings
 markdown: kramdown
