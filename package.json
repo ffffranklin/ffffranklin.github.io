@@ -18,5 +18,18 @@
   "bugs": {
     "url": "https://github.com/ffffranklin/ffffranklin.github.io/issues"
   },
-  "homepage": "https://github.com/ffffranklin/ffffranklin.github.io#readme"
+  "homepage": "https://github.com/ffffranklin/ffffranklin.github.io#readme",
+  "devDependencies": {
+    "eslint": "^1.5.1",
+    "eslint-config-defaults": "^6.0.0",
+    "faucet": "0.0.1",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-shell": "^0.4.3",
+    "gulp-util": "^3.0.6",
+    "sinon": "^1.17.0",
+    "tape": "^4.2.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
+  }
 }
