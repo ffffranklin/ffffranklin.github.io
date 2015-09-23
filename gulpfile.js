@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var shell = require('gulp-shell');
-var eslint = require('eslint');
+var eslint = require('gulp-eslint');
 
 gulp.task('default', ['test']);
 gulp.task('test', function (cb) { cb(); });
@@ -15,7 +15,12 @@ gulp.task('serve:jekyll', shell.task([
   'jekyll serve -w --config _config.yml,_config.dev.yml .'
 ]));
 gulp.task('lint', function () {
-  return gulp.src(['gulpfile.js', 'site/es6/**/*.js', 'test/unit/es6/**/*.js'])
+  return gulp.src([
+    'gulpfile.js',
+    'gulp/**/*.js',
+    'site/es6/**/*.js',
+    'test/unit/es6/**/*.js'
+  ])
     .pipe(eslint())
     .pipe(eslint.format());
 });
