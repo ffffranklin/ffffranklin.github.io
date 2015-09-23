@@ -6,6 +6,14 @@ module.exports = {
     publicPath: 'js/',
     filename: 'bundle.js'
   },
+  module: {
+    loaders: [
+      {
+        test:path.join(__dirname, '/site/_es6'),
+        loader: 'babel-loader'
+      }
+    ]
+  },
   plugins: []
 };
 

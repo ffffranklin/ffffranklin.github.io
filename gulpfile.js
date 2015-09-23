@@ -12,9 +12,9 @@ var jsFiles = [
   'test/unit/es6/**/*.js'
 ];
 
-gulp.task('default', ['test']);
+gulp.task('default', ['lint', 'test']);
 gulp.task('test', shell.task([
-  'tape "test/**/*.test.js" | faucet'
+  'node node_modules/babel-tape-runner/bin/babel-tape-runner test/**/*.js | faucet'
 ]));
 gulp.task('build', ['pack:build']);
 gulp.task('pack:build', require('./gulp/webpack').build);
