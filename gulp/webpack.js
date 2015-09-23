@@ -22,15 +22,39 @@ exports.buildDev = function buildDev(cb) {
   });
 };
 
+exports.build = function build(cb) {
+  // modify some webpack config options
+  var config = Object.create(webpackConfig);
+  config.plugins = config.plugins.concat(
+    new webpack.DefinePlugin({
+      "process.env": {
+        "NODE_ENV": JSON.stringify("production")
+      }
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin()
+  );
+
+  // run webpack
+  webpack(config, function(err, stats) {
+    if(err) throw new gutil.PluginError("pack:build", err);
+    gutil.log("[pack:build]", stats.toString({
+      colors: true
+    }));
+    cb();
+  });
+
+};
+
 exports.server = function server() {
   // modify some webpack config options
-  var myConfig = Object.create(webpackConfig);
-  myConfig.devtool = "eval";
-  myConfig.debug = true;
+  var config = Object.create(webpackConfig);
+  config.devtool = "eval";
+  config.debug = true;
 
   // Start a webpack-dev-server
-  new WebpackDevServer(webpack(myConfig), {
-    publicPath: "/" + myConfig.output.publicPath,
+  new WebpackDevServer(webpack(config), {
+    publicPath: "/" + config.output.publicPath,
     stats: {
       colors: true
     }
