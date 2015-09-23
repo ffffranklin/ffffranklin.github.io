@@ -15,3 +15,5 @@ destination: site/_site
 
 # Build settings
 markdown: kramdown
+
+assets_url: ''

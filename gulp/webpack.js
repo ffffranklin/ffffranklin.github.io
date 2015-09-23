@@ -20,4 +20,23 @@ exports.buildDev = function buildDev(cb) {
     }));
     cb();
   });
-}
+};
+
+exports.server = function server() {
+  // modify some webpack config options
+  var myConfig = Object.create(webpackConfig);
+  myConfig.devtool = "eval";
+  myConfig.debug = true;
+
+  // Start a webpack-dev-server
+  new WebpackDevServer(webpack(myConfig), {
+    publicPath: "/" + myConfig.output.publicPath,
+    stats: {
+      colors: true
+    }
+  }).listen(9876, "localhost", function(err) {
+    if(err) throw new gutil.PluginError("pack:server", err);
+    gutil.log("[pack:server]", "http://localhost:9876/webpack-dev-server/index.html");
+  });
+
+};
