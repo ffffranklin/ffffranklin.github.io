@@ -1,0 +1,23 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ffffranklin/ffffranklin.github.io",
+  "authors": [
+    "Franklin <ffffranklin@pobox.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "modernizr": "~3.0.0"
+  }
+}
