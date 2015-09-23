@@ -5,6 +5,7 @@ module.exports = {
     path: path.join(__dirname, '/site/js'),
     publicPath: 'js/',
     filename: 'bundle.js'
-  }
+  },
+  plugins: []
 };
 

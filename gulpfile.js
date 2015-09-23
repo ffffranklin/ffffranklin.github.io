@@ -7,7 +7,7 @@ var eslint = require('eslint');
 
 gulp.task('default', ['test']);
 gulp.task('test', function (cb) { cb(); });
-gulp.task('pack:build', function (cb) { cb(); });
+gulp.task('pack:build', require('./gulp/webpack').build);
 gulp.task('pack:build-dev', require('./gulp/webpack').buildDev);
 gulp.task('pack:server', require('./gulp/webpack').server);
 gulp.task('serve', ['pack:server','serve:jekyll']);
