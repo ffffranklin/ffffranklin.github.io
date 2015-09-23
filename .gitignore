@@ -1,5 +1,16 @@
-.idea
+*.DS_Store
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
 
-# jekyll generated
-_site
-.sass-cache
+/.idea
+/.sass-cache
+/.env
+/node_modules
+/coverage
+
+# jekyll
+/site/_site
