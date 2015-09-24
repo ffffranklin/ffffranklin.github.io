@@ -18,7 +18,7 @@ gulp.task('test', shell.task([
   'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet'
 ]));
 
-gulp.task('build', ['test', 'pack:build']);
+gulp.task('build', ['test', 'jekyll:build', 'pack:build']);
 
 gulp.task('pack:build', require('./_gulp/webpack').build);
 
@@ -26,10 +26,14 @@ gulp.task('pack:build-dev', require('./_gulp/webpack').buildDev);
 
 gulp.task('pack:server', require('./_gulp/webpack').server);
 
-gulp.task('serve', ['pack:server','serve:jekyll']);
+gulp.task('serve', ['pack:server','jekyll:serve']);
 
-gulp.task('serve:jekyll', shell.task([
+gulp.task('jekyll:serve', shell.task([
   'jekyll serve -w --config _config.yml,_config.dev.yml .'
+]));
+
+gulp.task('jekyll:build', shell.task([
+  'jekyll build .'
 ]));
 
 gulp.task('lint', function () {
@@ -49,6 +53,3 @@ gulp.task('cover', shell.task([
 gulp.task('codeclimate', ['cover'], shell.task([
   'codeclimate-test-reporter < coverage/lcov.info'
 ]));
-
-
-
