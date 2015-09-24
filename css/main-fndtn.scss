@@ -3,5 +3,7 @@
 ---
 @charset "utf-8";
 
-@import "../bower_components/foundation/_scss/normalize";
-@import "../bower_components/foundation/_scss/foundation";
+//@import "../bower_components/foundation/_scss/normalize";
+//@import "../bower_components/foundation/_scss/foundation";
+@import "base.scss";
+@import "athena.scss";
