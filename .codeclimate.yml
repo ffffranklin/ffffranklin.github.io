@@ -37,13 +37,13 @@ engines:
 
 ratings:
   paths:
-  - site/_es6/**
-  - site/_sass/**
-  - site/css/**
+  - _es6/**
+  - _sass/**
+  - css/**
 
 # You can globally exclude files from being analyzed by any engine using the
 # exclude_paths key.
 
 exclude_paths:
-- site/js/**/*
-- test/**/*
+- js/**/*
+- _test/**/*
