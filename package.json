@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "gulp build",
+    "test": "gulp test",
     "codeclimate": "gulp codeclimate"
   },
   "repository": {
