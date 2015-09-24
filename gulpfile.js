@@ -18,7 +18,7 @@ gulp.task('test', shell.task([
   'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet'
 ]));
 
-gulp.task('build', ['pack:build']);
+gulp.task('build', ['test', 'pack:build']);
 
 gulp.task('pack:build', require('./_gulp/webpack').build);
 
