@@ -7,24 +7,24 @@ var eslint = require('gulp-eslint');
 
 var jsFiles = [
   'gulpfile.js',
-  'gulp/**/*.js',
-  'site/es6/**/*.js',
-  'test/unit/es6/**/*.js'
+  '_gulp/**/*.js',
+  '_es6/**/*.js',
+  '_test/unit/es6/**/*.js'
 ];
 
 gulp.task('default', ['lint', 'test']);
 
 gulp.task('test', shell.task([
-  'node node_modules/babel-tape-runner/bin/babel-tape-runner test/**/*.js | faucet'
+  'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet'
 ]));
 
 gulp.task('build', ['pack:build']);
 
-gulp.task('pack:build', require('./gulp/webpack').build);
+gulp.task('pack:build', require('./_gulp/webpack').build);
 
-gulp.task('pack:build-dev', require('./gulp/webpack').buildDev);
+gulp.task('pack:build-dev', require('./_gulp/webpack').buildDev);
 
-gulp.task('pack:server', require('./gulp/webpack').server);
+gulp.task('pack:server', require('./_gulp/webpack').server);
 
 gulp.task('serve', ['pack:server','serve:jekyll']);
 
@@ -43,7 +43,7 @@ gulp.task('watch', ['lint', 'test'], function() {
 });
 
 gulp.task('cover', shell.task([
-  'istanbul cover babel-tape-runner -- "test/**/*.test.js"'
+  'istanbul cover babel-tape-runner -- "_test/**/*.test.js"'
 ]));
 
 gulp.task('codeclimate', ['cover'], shell.task([
