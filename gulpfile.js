@@ -29,11 +29,11 @@ gulp.task('pack:server', require('./_gulp/webpack').server);
 gulp.task('serve', ['pack:server','jekyll:serve']);
 
 gulp.task('jekyll:serve', shell.task([
-  'jekyll serve -w --config _config.yml,_config.dev.yml .'
+  'jekyll serve -w --trace --config _config.yml,_config.dev.yml .'
 ]));
 
 gulp.task('jekyll:build', shell.task([
-  'jekyll build .'
+  'jekyll build . --trace'
 ]));
 
 gulp.task('lint', function () {
