@@ -1,1 +1,4 @@
 assets_url: '//localhost:9876'
+sass:
+  sourcemap: true
+  style: expanded
