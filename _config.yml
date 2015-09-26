@@ -1,12 +1,12 @@
 # Site settings
 title: ffffranklin
-email: fclark@franklinclark.com
+email: ffffranklin@pobox.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ffffrankl.in" # the base hostname & protocol for your site
+url: "http://ffffranklin.com" # the base hostname & protocol for your site
 permalink:   /blog/:title/
 twitter_username: _ffffranklin
 github_username: ffffranklin
@@ -14,4 +14,29 @@ github_username: ffffranklin
 # Build settings
 markdown: kramdown
 
+exclude:
+  - "node_modules"
+  - "coverage"
+
+# Custom variables
 assets_url: ''
+
+sass:
+  style: compressed
+  load_paths:
+   - 'bower_components/foundation/_scss'
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "work"
+      type: "pages"
+    values:
+      layout: "project"
