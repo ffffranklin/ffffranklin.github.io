@@ -33,7 +33,7 @@ gulp.task('jekyll:serve', shell.task([
 ]));
 
 gulp.task('jekyll:build', shell.task([
-  'jekyll build . --trace'
+  'jekyll build . --trace --safe'
 ]));
 
 gulp.task('lint', function () {
