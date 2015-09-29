@@ -93,7 +93,7 @@ $font-family-monospace: $font-family-three;
 
 // We use these to define default font weights
 // $font-weight-normal: normal;
-// $font-weight-bold: bold;
+$font-weight-bold: bold;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -126,7 +126,7 @@ $font-family-monospace: $font-family-three;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-two;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -210,8 +210,9 @@ $font-family-monospace: $font-family-three;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: $font-family-one;
 // $header-font-weight: $font-weight-normal;
+$header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;

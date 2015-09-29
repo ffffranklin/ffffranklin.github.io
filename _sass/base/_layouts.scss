@@ -1,0 +1,10 @@
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+.post,
+.page {
+  @media #{$small-up} {
+    margin-top:1rem;
+  }
+}
