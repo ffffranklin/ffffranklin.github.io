@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-@import 'base/variables';
 @import 'base/settings';
-@import 'base/elements';
-@import 'base/layouts';
-@import 'vendor/syntax-highlighting';
 @import '../bower_components/foundation/_scss/normalize';
 @import '../bower_components/foundation/_scss/foundation/components/grid';
 @import '../bower_components/foundation/_scss/foundation/components/block-grid';
 @import '../bower_components/foundation/_scss/foundation/components/type';
 @import '../bower_components/foundation/_scss/foundation/components/visibility';
+@import 'base/variables';
+@import 'base/elements';
+@import 'base/layouts';
+@import 'vendor/syntax-highlighting';
 
