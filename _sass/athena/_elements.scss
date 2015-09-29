@@ -1,19 +1,37 @@
 @import "../bower_components/foundation/_scss/foundation/functions";
+@import "../bower_components/foundation/_scss/foundation/components/grid";
 
 .site-header {
   position: relative;
   padding-top: 1rem;
   border-bottom: 1px solid $gray-lighter;
+  .wrapper {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    @media #{$medium-up} {
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 
+
 .site-tagline {
-  text-align: center;
-  margin-bottom: 0.5rem;
+  @media #{$small-only} {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
 }
 
 .site-nav {
-  margin-bottom: 3.5rem;
-  text-align: center;
+  @media #{$small-only} {
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  @media #{$medium-up} {
+    text-align: right;
+  }
 }
 
 .site-logo {

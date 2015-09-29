@@ -3,12 +3,12 @@
   <div class="wrapper row">
 
     <!-- Tagline Begins  -->
-    <div class="site-tagline small-12 columns">Creator by day, creator by night.</div>
+    <div class="site-tagline small-12 medium-4 columns">Franklin Clark</div>
     <!-- @Tagline Ends -->
 
     <!-- Site Nav Begins -->
-    <nav class="site-nav small-12 columns">
-      <div class="trigger">
+    <nav class="site-nav small-12 medium-push-4 medium-4 columns">
+      <div class="link-list">
         {% assign pages = site.pages | sort: "weight" %}
         {% for page in pages %}
         {% if page.title %}
@@ -21,11 +21,11 @@
 
     <!-- Logo Begins -->
     <div class="site-logo">
-      <div class="site-logo-container">
-        <a class="site-logo-icon" href="{{ site.baseurl }}/">
+      <a class="site-logo-container" href="{{ site.baseurl }}/">
+        <div class="site-logo-icon">
           <span class="hide" alt="{{ site.title }}">Home</span>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
     <!-- @Logo Ends -->
 
