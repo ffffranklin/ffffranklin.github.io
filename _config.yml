@@ -23,8 +23,6 @@ assets_url: ''
 
 sass:
   style: compressed
-  load_paths:
-   - 'bower_components/foundation/_scss'
 
 # Defaults
 defaults:
