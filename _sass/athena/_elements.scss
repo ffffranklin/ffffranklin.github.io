@@ -1,0 +1,50 @@
+@import "../bower_components/foundation/_scss/foundation/functions";
+
+.site-header {
+  position: relative;
+  padding-top: 1rem;
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.site-tagline {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.site-nav {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.site-logo {
+
+  @function ratio-height-calc($width) {
+    $ratio: 102 177;
+    @return nth($ratio, 2) / nth($ratio, 1) * $width;
+  }
+  $w: rem-calc(30);
+  $h: rem-calc(ratio-height-calc(30));
+
+  .site-logo-container {
+    $pad-x: 1rem;
+    $pad-y: 2rem;
+    display: inline-block;
+    position:absolute;
+    left: 50%;
+    bottom: -($h/2) - ($pad-y/1.5);
+    margin-left: -($w/2) - (2*$pad-x);
+    padding: $pad-x $pad-y;
+    background-color: $color-bg-one;
+    border-radius: 50%;
+    border: 1px solid $gray-lighter;
+  }
+  .site-logo-icon {
+    display: inline-block;
+    width: $w;
+    height: $h;
+    background-image: url('/img/logo-ffff.png');
+    background-size: $w $h;
+    background-repeat: no-repeat;
+  }
+}
+
