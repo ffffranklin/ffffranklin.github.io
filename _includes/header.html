@@ -1,19 +1,35 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <div class="wrapper row">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- Tagline Begins  -->
+    <div class="site-tagline small-12 medium-4 columns">
+      <a href="{{ site.baseurl}}/">Coder by day, coder by night.</a>
+    </div>
+    <!-- @Tagline Ends -->
 
-    <nav class="site-nav">
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
+    <!-- Site Nav Begins -->
+    <nav class="site-nav small-12 medium-push-4 medium-4 columns">
+      <div class="link-list">
+        {% assign pages = site.pages | sort: "weight" %}
+        {% for page in pages %}
+        {% if page.title %}
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
         {% endfor %}
       </div>
     </nav>
+    <!-- @Site Nav Ends -->
+
+    <!-- Logo Begins -->
+    <div class="site-logo">
+      <a class="site-logo-container" href="{{ site.baseurl }}/">
+        <div class="site-logo-icon">
+          <span class="hide" alt="{{ site.title }}">Home</span>
+        </div>
+      </a>
+    </div>
+    <!-- @Logo Ends -->
 
   </div>
 
