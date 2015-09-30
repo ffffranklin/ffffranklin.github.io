@@ -1,0 +1,37 @@
+.site-logo {
+  display: inline-block;
+  position:absolute;
+  left: 50%;
+  bottom: -2.5rem;
+  margin-left: -2.5rem;
+}
+
+.site-tagline {
+  @media #{$small-only} {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  a {
+    font-family: $font-family-one;
+    font-size: $font-size-small;
+    text-transform:uppercase;
+    color: rgba($white, 0.9);
+  }
+}
+
+.site-nav {
+  @media #{$small-only} {
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  @media #{$medium-up} {
+    text-align: right;
+  }
+  .page-link {
+    font-family: $font-family-one;
+    font-size: $font-size-small;
+    margin-left: 1rem;
+    text-transform:uppercase;
+    color: rgba($white, 0.5);
+  }
+}
