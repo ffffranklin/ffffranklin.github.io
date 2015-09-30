@@ -1,4 +1,4 @@
-@mixin hide-text {
+@mixin hide-children {
   > * {
     display: none;
   }
