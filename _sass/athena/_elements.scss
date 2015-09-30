@@ -1,1 +1,25 @@
+.logo {
 
+  @function ratio-height-calc($width) {
+    // original logo size
+    $ratio: 102 177;
+    @return nth($ratio, 2) / nth($ratio, 1) * $width;
+  }
+
+  $bg-w: rem-calc(30);
+  $bg-h: rem-calc(ratio-height-calc(30));
+
+  @include hide-children;
+
+  height: 5rem;
+  width: 5rem;
+  background: {
+    image: url('/img/logo-ffff.png');
+    size: $bg-w $bg-h;
+    repeat: no-repeat;
+    color: $color-bg-one;
+    position: center center;
+  }
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
