@@ -4,7 +4,29 @@
 
 .post,
 .page {
-  @media #{$small-up} {
-    margin-top:1rem;
+  margin-top:3.5rem;
+}
+
+.site-header {
+  @include clearfix;
+  background-color: $color-bg-three;
+  position: relative;
+  @media #{$small-only} {
+    height: 8rem;
+  }
+  @media #{$medium-up} {
+    height: 5rem;
+  }
+  .wrapper {
+    width: 97%;
+    margin: {
+      top: 1.7rem;
+      left: auto;
+      right: auto;
+    }
+    max-width: initial;
+    @media #{$medium-up} {
+      margin-bottom: 0.9rem;
+    }
   }
 }
