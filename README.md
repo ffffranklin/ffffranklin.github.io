@@ -1,10 +1,6 @@
-```
-   __  __  __  __                 _    _   _       
-  / _|/ _|/ _|/ _|_ __ __ _ _ __ | | __ | (_)_ __  
- | |_| |_| |_| |_| '__/ _` | '_ \| |/ / | | | '_ \ 
- |  _|  _|  _|  _| | | (_| | | | |   <| |_| | | | |
- |_| |_| |_| |_| |_|  \__,_|_| |_|_|\_\_(_)_|_| |_|
-                                                 
-```
+# ffffranklin.com
 
-Github project flagship site
+[![Build Status](https://travis-ci.org/ffffranklin/ffffranklin.github.io.svg?branch=master](https://travis-ci.org/ffffranklin/ffffranklin.github.io)
+
+Blog and open source project showcase.
+
