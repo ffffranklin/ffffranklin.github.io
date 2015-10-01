@@ -1,0 +1,62 @@
+<div class="long-shadow-logo">
+  <script>
+    (function(dom) {
+
+      var logo = dom.querySelector('.long-shadow-logo');
+
+      var toggleClass = function toggleClass(className, newClass) {
+        if (className.search(newClass) !== -1) {
+          return className.replace(newClass, '').replace('  ', ' ');
+        } else {
+          return [className, newClass].join(' ');
+        }
+      };
+
+      var handleHover = function handleHover() {
+        this.className = toggleClass(this.className, 'hover');
+      };
+
+      logo.addEventListener('mouseenter', handleHover);
+      logo.addEventListener('mouseleave', handleHover);
+
+    })(document);
+  </script>
+  <div class="flipper">
+    <div class="front content">
+      <!-- Logo Begins -->
+      <a href="https://github.com/ffffranklin" target="_blank">
+        <img alt="ffff" src="img/logo-ffff-shadow.png"/>
+      </a>
+      <!-- @Logo Ends -->
+    </div>
+    <div class="back content">
+      <!-- Portrait Begins -->
+      <a href="https://github.com/ffffranklin" target="_blank">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 110 110"
+          xml:space="preserve"
+          width="110px">
+          <defs>
+            <circle id="circle" cx="55" cy="55" r="55"></circle>
+          </defs>
+          <clipPath id="clip">
+            <use xlink:href="#circle" overflow="visible"></use>
+          </clipPath>
+          <g clip-path="url(#clip)">
+            <image
+              overflow="visible"
+              width="110"
+              height="110"
+              xlink:href="https://avatars2.githubusercontent.com/u/1546561?v=3&amp;s=110"></image>
+          </g>
+        </svg>
+      </a>
+      <!-- @Portrait Ends -->
+    </div>
+  </div>
+</div>
