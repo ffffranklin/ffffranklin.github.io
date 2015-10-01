@@ -10,6 +10,8 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.013/css/hack-extended.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Martel' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ '/css/main-styleguide.css' | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
@@ -17,6 +19,13 @@
 
 <div class="row">
   <div class="small-12 columns">
+
+    <header role="banner">
+      <img src="/img/logo-ffff-shadow.png" />
+    </header>
+
+    <hr />
+
     <section>
       <p>Headings</p>
       <h1>Heading 1</h1>
@@ -26,6 +35,8 @@
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
     </section>
+
+    <hr />
 
     <section class="sg-font-sizes">
       <p>Font Sizes</p>
