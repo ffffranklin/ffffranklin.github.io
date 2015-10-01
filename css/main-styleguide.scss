@@ -9,6 +9,11 @@
 @import "elements";
 @import "layout";
 
+
+[role="banner"] {
+  margin-top: 1rem;
+}
+
 .sg-font-sizes {
   overflow:auto;
   .sample {
