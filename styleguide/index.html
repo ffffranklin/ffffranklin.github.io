@@ -1,0 +1,60 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="stylesheet" href="{{ '/css/main-styleguide.css' | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+</head>
+<body>
+
+<div class="row">
+  <div class="small-12 columns">
+    <section>
+      <p>Headings</p>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+
+    <section class="sg-font-sizes">
+      <p>Font Sizes</p>
+
+      <p class="font-size-xxlarge sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-xxlarge</p>
+
+      <p class="font-size-xlarge sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-xlarge</p>
+
+      <p class="font-size-large sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-large</p>
+
+      <p class="font-size-normal sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-normal</p>
+
+      <p class="font-size-small sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-small</p>
+
+      <p class="font-size-xsmall sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-xsmall</p>
+
+      <p class="font-size-xxsmall sample">Jail zesty vixen who grabbed pay from quack. Brazen old wives fight a quick jumpy ox. Pack my box with five dozen liquor jugs.</p>
+      <p class="sg-handle">$font-size-xxsmall</p>
+
+    </section>
+
+  </div>
+</div>
+
+</body>
+</html>
