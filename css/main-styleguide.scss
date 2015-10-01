@@ -9,6 +9,38 @@
 @import "elements";
 @import "layout";
 
+// compass helper functions
+
+@function brightness($color) {
+  @if type-of($color) == color {
+    @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+  }
+  @else {
+    @return unquote("brightness(#{$color})");
+  }
+}
+
+$contrasted-dark-default:   #000 !default;
+$contrasted-light-default:  #fff !default;
+
+@function contrast-color(
+  $color,
+  $dark: $contrasted-dark-default,
+  $light: $contrasted-light-default
+) {
+  @if $color == null {
+    @return null;
+  }
+  @else {
+    $color-brightness: brightness($color);
+    $dark-text-brightness: brightness($dark);
+    $light-text-brightness: brightness($light);
+
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+  }
+}
+
+// styles
 
 [role="banner"] {
   margin-top: 1rem;
@@ -34,3 +66,27 @@
 .font-size-large { font-size: $font-size-large; }
 .font-size-xlarge { font-size: $font-size-xlarge; }
 .font-size-xxlarge { font-size: $font-size-xxlarge; }
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.color {
+  height: 180px;
+  width: 180px;
+  margin-bottom: 1rem;
+  line-height: 180px;
+  text-align: center;
+}
+
+.color-one { background-color: $color-one; color: contrast-color($color-one)}
+.color-two { background-color: $color-two; color: contrast-color($color-two)}
+.color-three { background-color: $color-three; color: contrast-color($color-three)}
+.color-four { background-color: $color-four; color: contrast-color($color-four)}
+.color-five { background-color: $color-five; color: contrast-color($color-five)}
+
+.color-bg-one { background-color: $color-bg-one; color: contrast-color($color-bg-one)}
+.color-bg-two { background-color: $color-bg-two; color: contrast-color($color-bg-two)}
+.color-bg-three{ background-color: $color-bg-three; color: contrast-color($color-bg-three)}
