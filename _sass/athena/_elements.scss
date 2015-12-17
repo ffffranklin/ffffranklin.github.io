@@ -1,4 +1,4 @@
-.logo {
+.logo-ffff {
 
   @function ratio-height-calc($width) {
     // original logo size
@@ -14,12 +14,11 @@
   height: 5rem;
   width: 5rem;
   background: {
-    image: url('/img/logo-ffff.png');
+    image: url('/img/logo-ffff.svg');
     size: $bg-w $bg-h;
     repeat: no-repeat;
     color: $color-bg-one;
     position: center center;
   }
   border-radius: 50%;
-  box-shadow: 0 3px 5px rgba(0,0,0,.3);
 }
