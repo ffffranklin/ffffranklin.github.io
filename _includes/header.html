@@ -2,14 +2,8 @@
 
   <div class="wrapper row">
 
-    <!-- Tagline Begins  -->
-    <div class="site-tagline small-12 medium-4 columns">
-      <a href="{{ site.baseurl}}/">Coder by day, coder by night.</a>
-    </div>
-    <!-- @Tagline Ends -->
-
     <!-- Site Nav Begins -->
-    <nav class="site-nav small-12 medium-push-4 medium-4 columns">
+    <nav class="site-nav columns">
       <div class="link-list">
         {% assign pages = site.pages | sort: "weight" %}
         {% for page in pages %}
