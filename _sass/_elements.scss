@@ -5,18 +5,30 @@
 
 .site-nav {
   position: fixed;
+  margin-top: 6rem;
   top: 0;
   left: 0;
 
   a {display:block}
 }
 
+.site-header {
+  height: 5.3rem;
+  background-color: #ddd;
+
+  .site-logo {
+    position: absolute;
+    left: 45%;
+    top: 0;
+  }
+}
+
 .drawer-trigger {
   display: block;
-  .drawer-controller:checked ~ .site-wrapper &:after  {
-    content: "Close Menu";
-  }
-  &:after {
+  &.closed:after  {
     content: "Open Menu"
+  }
+  &.opened:after {
+    content: "Close Menu";
   }
 }
