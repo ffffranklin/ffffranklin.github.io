@@ -4,4 +4,19 @@
 }
 
 .site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  a {display:block}
+}
+
+.drawer-trigger {
+  display: block;
+  .drawer-controller:checked ~ .site-wrapper &:after  {
+    content: "Close Menu";
+  }
+  &:after {
+    content: "Open Menu"
+  }
 }

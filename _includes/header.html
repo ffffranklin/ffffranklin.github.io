@@ -2,20 +2,7 @@
 
   <div class="wrapper row">
 
-    <div class="icon-hamburger js-hamburger">Menu</div>
-
-    <!-- Site Nav Begins -->
-    <nav class="site-nav columns">
-      <div class="link-list">
-        {% assign pages = site.pages | sort: "weight" %}
-        {% for page in pages %}
-        {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-    <!-- @Site Nav Ends -->
+    <label class="drawer-trigger" for="drawer-controller"></label>
 
     <!-- Logo Begins -->
     <a class="site-logo logo-ffff" alt="{{ site.title }}"  href="{{ site.baseurl }}/">
