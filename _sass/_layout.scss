@@ -2,3 +2,24 @@
   margin-bottom: $spacing-unit / 2;
 }
 
+.site-wrapper {
+  height: 100%;
+  background-color: #fff;
+  border: none;
+
+  .wrapper {
+    -webkit-backface-visibility: hidden;
+  }
+
+  .drawer-controller ~ & {
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .drawer-controller:checked ~ &  {
+    transform: translate3d(200px, 0, 0);
+  }
+
+}
+

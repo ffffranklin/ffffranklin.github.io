@@ -16,19 +16,39 @@
 
   <body>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <!-- Site Nav Begins -->
+    <nav class="site-nav columns">
+      <div class="link-list">
+        {% assign pages = site.pages | sort: "weight" %}
+        <a class="page-link" href="{{ '/home.html' | prepend: site.baseurl }}">Home</a>
+        {% for page in pages %}
+        {% if page.title %}
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+        {% endfor %}
       </div>
+    </nav>
+    <!-- @Site Nav Ends -->
+
+    <input id="drawer-controller" class="drawer-controller visually-hidden" type="checkbox" name="drawer">
+
+    <div class="site-wrapper">
+
+      {% include header.html %}
+
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </div>
+
+      {% include footer.html %}
+
+      {% include analytics.html %}
+
+      {% include foot.html %}
+
     </div>
-
-    {% include footer.html %}
-
-    {% include analytics.html %}
-
-    {% include foot.html %}
 
   </body>
 
