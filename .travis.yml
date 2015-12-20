@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "stable"
-  - "0.12"
+  - "0.4"
 before_script:
   - npm install -g codeclimate-test-reporter istanbul babel-tape-runner gulp
 script:
