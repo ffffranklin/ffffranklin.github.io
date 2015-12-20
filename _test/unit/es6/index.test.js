@@ -1,6 +1,6 @@
 var test = require('tape');
-//var index = require('../../../es6/index.js');
-test('starts', function (t) {
-  //t.ok(index.start);
+var index = require('../../../_es6/index.js');
+test('main function', function (t) {
+  t.equal(typeof index.__main__, 'function');
   t.end();
 });

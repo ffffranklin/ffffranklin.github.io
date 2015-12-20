@@ -8,4 +8,10 @@ var classToggler = function classToggler($el, classes) {
   return $.fn.toggleClass.bind($el, classes);
 };
 
-$('.drawer-trigger').on('click', classToggler($('.drawer-trigger'), 'opened closed'));
+var __main__ = function __main__() {
+  var handler = classToggler($('.drawer-trigger'), 'opened closed');
+  $('.drawer-trigger')
+    .on('click', handler);
+}
+
+exports.__main__ = __main__;
