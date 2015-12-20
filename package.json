@@ -32,6 +32,7 @@
     "gulp-eslint": "^1.0.0",
     "gulp-shell": "^0.5.1",
     "gulp-util": "^3.0.6",
+    "rewire": "^2.5.1",
     "sinon": "^1.17.0",
     "tape": "^4.2.0",
     "webpack": "^1.12.2",
