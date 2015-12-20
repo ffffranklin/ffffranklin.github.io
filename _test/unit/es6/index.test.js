@@ -1,7 +1,16 @@
 'use strict';
 
 var test = require('tape');
-var index = require('../../../_es6/index.js');
+var rewire = require('rewire');
+var index = rewire('../../../_es6/index.js');
+
+index.__set__({
+  $: {
+    fn: {
+      toggleClass: function () {}
+    }
+  }
+});
 
 test('main function', function (t) {
   t.equal(typeof index.__main__, 'function');
