@@ -14,4 +14,5 @@ var __main__ = function __main__() {
     .on('click', handler);
 }
 
+exports.classToggler = classToggler;
 exports.__main__ = __main__;
