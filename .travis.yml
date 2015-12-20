@@ -6,5 +6,5 @@ before_script:
   - npm install -g codeclimate-test-reporter istanbul babel-tape-runner gulp
 script:
   - npm test
-  - npm run-script codeclimate
+  # - npm run-script codeclimate
 
