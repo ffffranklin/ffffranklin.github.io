@@ -1,37 +1,33 @@
 .site-logo {
-  display: inline-block;
-  position:absolute;
-  left: 50%;
-  bottom: -2.5rem;
-  margin-left: -2.5rem;
-}
-
-.site-tagline {
-  @media #{$small-only} {
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-  a {
-    font-family: $font-family-one;
-    font-size: $font-size-small;
-    text-transform:uppercase;
-    color: rgba($white, 0.9);
-  }
+  display:block;
+  border: 1px solid #ddd;
 }
 
 .site-nav {
-  @media #{$small-only} {
-    margin-bottom: 3.5rem;
-    text-align: center;
+  position: fixed;
+  margin-top: 6rem;
+  top: 0;
+  left: 0;
+
+  a {display:block}
+}
+
+.site-header {
+  height: 3rem;
+  background-color: #ddd;
+
+  .site-logo {
+    position: absolute;
+    left: 49%;
+    top: 0;
   }
-  @media #{$medium-up} {
-    text-align: right;
-  }
-  .page-link {
-    font-family: $font-family-one;
-    font-size: $font-size-small;
-    margin-left: 1rem;
-    text-transform:uppercase;
-    color: rgba($white, 0.5);
-  }
+}
+
+.drawer-trigger {
+  display: block;
+  height: 100%;
+  width: 2rem;
+  background-image: url(/img/icon-burger-menu.svg);
+  background-position-y: center;
+  background-repeat: no-repeat;
 }

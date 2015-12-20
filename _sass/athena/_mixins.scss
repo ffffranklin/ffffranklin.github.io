@@ -1,0 +1,38 @@
+/**
+ * ffff Logo Height Calc Function
+ * @param {int} $width-multiplier - in pixels
+ */
+@function ffff-logo-ratio-height-calc($width-multiplier) {
+  $width: 102;
+  $height: 177;
+  @return $height / $width * $width-multiplier;
+}
+
+/**
+ * Logo Mixin
+ * @param {int} $w - width in pixels
+ */
+@mixin logo($w) {
+  $bg-w: rem-calc($w);
+  $bg-h: rem-calc(ffff-logo-ratio-height-calc($w));
+  $padding: $bg-h * 0.5;
+  $size: $bg-h + $padding;
+  width: $size;
+  height: $size;
+  background: {
+    image: url('/img/logo-ffff.svg');
+    size: $bg-w $bg-h;
+    repeat: no-repeat;
+    color: $color-bg-one;
+    position: center center;
+  }
+}
+
+/**
+ * Circle Logo Mixin
+ * @param {int} $w - width in pixels
+ */
+@mixin logo-circle($w) {
+  @include logo($w);
+  border-radius: 50%;
+}

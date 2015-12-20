@@ -7,7 +7,7 @@ var webpackConfig = require('../webpack.config.js');
 var exports = module.exports = {};
 
 var myDevConfig = Object.create(webpackConfig);
-myDevConfig.devtool = "sourcemap";
+myDevConfig.devtool = "source-map";
 myDevConfig.debug = true;
 
 var devCompiler = webpack(myDevConfig);
