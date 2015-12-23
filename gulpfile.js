@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var shell = require('gulp-shell');
 var eslint = require('gulp-eslint');
+var browserSync = require('browser-sync').create();
 
 var jsFiles = [
   'gulpfile.js',
@@ -26,7 +27,7 @@ gulp.task('pack:build-dev', require('./_gulp/webpack').buildDev);
 
 gulp.task('pack:server', require('./_gulp/webpack').server);
 
-gulp.task('serve', ['pack:server','jekyll:serve']);
+gulp.task('serve', ['pack:server','jekyll:serve', 'browser-sync']);
 
 gulp.task('jekyll:serve', shell.task([
   'jekyll serve -w --trace --drafts --config _config.yml,_config.dev.yml .'
@@ -36,6 +37,12 @@ gulp.task('jekyll:build', shell.task([
   'jekyll build . --trace --safe'
 ]));
 
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    proxy: 'localhost:4000'
+  });
+});
+
 gulp.task('lint', function () {
   return gulp.src(jsFiles)
     .pipe(eslint())
@@ -43,7 +50,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('watch', ['lint', 'test'], function() {
-  gulp.watch(jsFiles, ['lint', 'test']);
+  gulp.watch(jsFiles, ['lint', 'test'], browserSync.reload);
 });
 
 gulp.task('cover', shell.task([

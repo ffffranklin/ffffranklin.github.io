@@ -25,6 +25,7 @@
     "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
     "babel-tape-runner": "^2.0.0",
+    "browser-sync": "^2.10.1",
     "eslint": "^1.5.1",
     "eslint-config-defaults": "^7.1.1",
     "faucet": "0.0.1",
