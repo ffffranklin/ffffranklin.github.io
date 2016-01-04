@@ -7,7 +7,6 @@ permalink: /info/resume/
  - Lead Front-End Web Developer
  - http://ffffranklin.com
  - San Francisco, CA
- - 415.320.6663
 
 ## Experience
 
