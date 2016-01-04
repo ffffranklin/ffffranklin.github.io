@@ -1,5 +1,15 @@
+@import '../bower_components/foundation/_scss/foundation/components/grid';
+
 .resume-doc {
   background: {
     color: #fff;
   }
+}
+
+.resume-wrapper {
+  @include grid-row();
+}
+
+.resume-content {
+  @include grid-column(12);
 }
