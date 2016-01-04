@@ -2,3 +2,12 @@
   display: none !important;
   visibility: hidden;
 }
+
+// hides link when printed
+// @see https://github.com/zurb/foundation-sites/blob/d8ddf9c7d26180ebccd1825beb1f8dba0aacc669/scss/typography/_print.scss#L35
+// @see http://stackoverflow.com/questions/25769562/zurb-foundation-print-styles-how-to-disable-urls-appearing-next-to-anchors-whe
+.no-link-for-print[href]:after {
+  @media print {
+    content: "";
+  }
+}
