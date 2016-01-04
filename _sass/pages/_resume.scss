@@ -12,4 +12,16 @@
 
 .resume-content {
   @include grid-column(12);
+  h1 {
+    color: $color-font-two !important;
+    @media print {
+      color: $color-font-two !important;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  ul, ol, dl {
+    font-size:0.9rem;
+  }
 }
