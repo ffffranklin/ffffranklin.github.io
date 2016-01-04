@@ -79,40 +79,41 @@ Digital Media Art / San Jose State University / 2001 - 2006
 Multidisciplinary degree offering a digital art and design curriculum in the areas of computer graphics, web development, programming, physical computing, fabrication, prototyping, interactivity and computer games.
 
 ## Skills
-Code
+
+### Code
 
  - JavaScript, HTML5, SASS, CSS3, XSLT/XML
  - Ruby, PHP5, Python, Shell Script
  - SQL
 
-Libraries/Frameworks
+### Libraries/Frameworks
 
  - Backbone, NodeJS, Angular, Mocha, Jasmine, Grunt
  - Rails, Zend, CakePHP
  - Django
 
-CMS
+### CMS
 
  - Expression Engine, Jekyll, WordPress, Drupal
 
-Analytics
+### Analytics
 
  - Segment, Google Analytics, KissMetrics, Omniture
 
-Software
+### Software
 
  - Sketch, Photoshop, Illustrator, Fireworks
  - Github, Atlassin, Trac, Pivotal Tracker
 
-Versioning
+### Versioning
 
  - GIT, SVN, Perforce
 
-Environments
+### Environments
 
  - OSX, Linux, Windows
 
-Methodologies
+### Methodologies
 
  - Agile Development
  - Responsive Design/Development
