@@ -14,7 +14,7 @@ permalink: /info/resume/
 [Freelance](http://ffffranklin.com) / San Francisco, CA / August 2015 - Present
 
 ### Front-End Web Engineering Manager
-[Prosper Marketplace](https://prosper.com) / San Francisco, CA / 2012 - 2015
+[Prosper Marketplace](https://www.prosper.com) / San Francisco, CA / 2012 - 2015
 
  - Created and coordinated the Prosper Front End Engineering team
  - Facilitated collaborative design/development process with Lean UX principles
