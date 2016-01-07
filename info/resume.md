@@ -10,7 +10,7 @@ permalink: /info/resume/
 
 ## Summary
 
- - __Effective Engineer, JavaScript architect, front-end advocate__ and __product visionary__ with over 12+ years of experience building robust web end-user applications.
+ - __Effective engineer, JavaScript architect, front-end advocate__ and __product visionary__ with over 12+ years of experience building robust web end-user applications.
  - __Leadership Experience__ with both start-up and enterprise-grade teams 
  - __Innovative__ pragmatic collaborator and problem solver
 
