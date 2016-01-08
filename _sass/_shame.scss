@@ -55,5 +55,8 @@
   .back { transform: rotateY(180deg); }
 }
 
-
+// temporary mobile padding fix for the simple layout
+.layout-simple .page-content {
+  padding-bottom: 5rem;
+}
 
