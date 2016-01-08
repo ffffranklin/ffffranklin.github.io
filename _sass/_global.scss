@@ -1,6 +1,11 @@
 @import "settings";
 @import "../bower_components/foundation/_scss/foundation/components/global";
 
+$primary-color: $horizon;
+$secondary-color: $ship-gray-lighter;
+$alert-color: $flamingo;
+$info-color: $horizon-lighter;
+
 .visually-hidden {
   display: none !important;
   visibility: hidden;
