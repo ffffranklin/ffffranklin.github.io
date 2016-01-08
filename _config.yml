@@ -1,8 +1,8 @@
 # Site settings
-title: ffffranklin
+title: "Franklin Clark"
 email: ffffranklin@pobox.com
-description: "Franklin Clark shares productivity and frontend web development tips, tricks and secrets"
-autor: "Franklin Clark"
+description: "Franklin Clark shares rants, tips, tricks and secrets on JavaScript and website development."
+author: "Franklin Clark"
 keywords: "ffffranklin, javascript, frontend, aws, developer, news, web, php, applications"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ffffranklin.com" # the base hostname & protocol for your site
