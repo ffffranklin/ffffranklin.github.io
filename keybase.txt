@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ffffranklin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ffffranklin.com
+  * I am ffffranklin (https://keybase.io/ffffranklin) on keybase.
+  * I have a public key ASAwZGyzPydTgaXZFMjxEmf1LInQ0b5H8oZYzxKThQoUAQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012030646cb33f275381a5d914c8f11267f52c89d0d1be47f28658cf1293850a14010a",
+      "host": "keybase.io",
+      "kid": "012030646cb33f275381a5d914c8f11267f52c89d0d1be47f28658cf1293850a14010a",
+      "uid": "c51a89a5aa316629a7b59ebd12fd2f19",
+      "username": "ffffranklin"
+    },
+    "merkle_root": {
+      "ctime": 1530444063,
+      "hash": "984eb1c3602e8121337295da5520e1d320c8db6ab78e1f5e56bdc4a45965b18056c070d48df95410610cdc5cbb5fdacb99305285eff32b3e015f4425e02a70b1",
+      "hash_meta": "f823d6d578061c2b4f5dd8fe22387090b0bd8ca9ee9e5a48db6e568842fe7051",
+      "seqno": 3182275
+    },
+    "service": {
+      "entropy": "aXtA/wvpYt+tArj7T31yh50H",
+      "hostname": "ffffranklin.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.2"
+  },
+  "ctime": 1530444092,
+  "expire_in": 504576000,
+  "prev": "1700627293cd881f173e19c04d32a3407891a11697b87cc75fe27e5acb076e9b",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgMGRssz8nU4Gl2RTI8RJn9SyJ0NG+R/KGWM8Sk4UKFAEKp3BheWxvYWTESpcCCcQgFwBicpPNiB8XPhnATTKjQHiRoRaXuHzHX+J+WssHbpvEILnzhqKdBex56C96vyesyudmn0LoIgaRGInDZCDAnonuAgHCo3NpZ8RAzF1gYXSakWhIODTNALwfJOi6otQhevHqBXIl9Kc3P4R8KqpUfo8VrP1HlrZnIl9CbStvztcVd4VX0FgjcKMGDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIH9TTm/aDzOa1C/6DN5BgQmleSDkgJ5Rsx5UzIuY5omjo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ffffranklin
+
+==================================================================
