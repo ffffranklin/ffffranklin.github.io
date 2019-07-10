@@ -30,7 +30,7 @@
     "eslint-config-defaults": "^7.1.1",
     "faucet": "0.0.1",
     "gulp": "^3.9.0",
-    "gulp-eslint": "^1.0.0",
+    "gulp-eslint": "^6.0.0",
     "gulp-shell": "^0.5.1",
     "gulp-util": "^3.0.6",
     "rewire": "^2.5.1",
