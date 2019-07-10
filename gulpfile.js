@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var shell = require('gulp-shell');
 var eslint = require('gulp-eslint');
+var gulpIf = require('gulp-if');
 var browserSync = require('browser-sync').create();
 
 var jsFiles = [
@@ -19,7 +20,8 @@ function isFixed(file) {
 }
 
 gulp.task('test', shell.task([
-  'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet'
+  'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js' +
+  ' | faucet'
 ]));
 
 gulp.task('pack:build', require('./_gulp/webpack').build);
@@ -42,19 +44,19 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('lint', function () {
-  return gulp.src(jsFiles)
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+gulp.task('lint', function() {
+  return gulp.src(jsFiles).
+    pipe(eslint()).
+    pipe(eslint.format()).
+    pipe(eslint.failAfterError());
 });
 
-gulp.task('lint:fix', function () {
-  return gulp.src(jsFiles)
-    .pipe(eslint({fix: true}))
-    .pipe(eslint.format())
+gulp.task('lint:fix', function() {
+  return gulp.src(jsFiles,  {base: "./"}).
+    pipe(eslint({fix: true})).
+    pipe(eslint.format()).
     // if fixed, write the file to dest
-    .pipe(gulpIf(isFixed, gulp.dest('./')));
+    pipe(gulpIf(isFixed, gulp.dest('./')));
 });
 
 gulp.task('serve', gulp.series('pack:server','jekyll:serve', 'browser-sync'));
