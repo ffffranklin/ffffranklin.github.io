@@ -7,10 +7,15 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test:path.join(__dirname, '/_es6'),
-        loader: 'babel-loader'
+        test: path.join(__dirname, '/_es6'),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   },
