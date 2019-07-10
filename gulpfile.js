@@ -13,13 +13,10 @@ var jsFiles = [
   '_test/unit/es6/**/*.js'
 ];
 
-gulp.task('default', ['lint', 'test']);
-
 gulp.task('test', shell.task([
   'node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet'
 ]));
 
-gulp.task('build', ['test', 'jekyll:build', 'pack:build']);
 
 gulp.task('pack:build', require('./_gulp/webpack').build);
 
@@ -27,7 +24,7 @@ gulp.task('pack:build-dev', require('./_gulp/webpack').buildDev);
 
 gulp.task('pack:server', require('./_gulp/webpack').server);
 
-gulp.task('serve', ['pack:server','jekyll:serve', 'browser-sync']);
+gulp.task('serve', gulp.series('pack:server','jekyll:serve', 'browser-sync'));
 
 gulp.task('jekyll:serve', shell.task([
   'jekyll serve -w --trace --drafts --config _config.yml,_config.dev.yml .'
@@ -49,14 +46,18 @@ gulp.task('lint', function () {
     .pipe(eslint.format());
 });
 
-gulp.task('watch', ['lint', 'test'], function() {
+gulp.task('build', gulp.series('test', 'jekyll:build', 'pack:build'));
+
+gulp.task('default', gulp.series('lint', 'test'));
+
+gulp.task('watch', gulp.series('lint', 'test', function() {
   gulp.watch(jsFiles, ['lint', 'test'], browserSync.reload);
-});
+}));
 
 gulp.task('cover', shell.task([
   'istanbul cover babel-tape-runner -- "_test/**/*.test.js"'
 ]));
 
-gulp.task('codeclimate', ['cover'], shell.task([
+gulp.task('codeclimate', gulp.series('cover', shell.task([
   'codeclimate-test-reporter < coverage/lcov.info'
-]));
+])));
