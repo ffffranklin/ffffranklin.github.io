@@ -33,7 +33,7 @@
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-shell": "^0.5.1",
+    "gulp-shell": "^0.7.1",
     "gulp-util": "^3.0.6",
     "rewire": "^2.5.1",
     "sinon": "^1.17.0",
