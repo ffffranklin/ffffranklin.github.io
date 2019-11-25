@@ -27,7 +27,7 @@
     "babel-loader": "^8.0.6",
     "babel-tape-runner": "^2.0.0",
     "browser-sync": "^2.10.1",
-    "eslint": "^6.0.1",
+    "eslint": "^6.7.1",
     "eslint-config-defaults": "^9.0.0",
     "faucet": "0.0.1",
     "gulp": "^4.0.2",
