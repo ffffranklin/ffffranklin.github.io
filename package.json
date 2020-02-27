@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ffffranklin/ffffranklin.github.io#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.4",
+    "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.5.4",
     "babel-loader": "^8.0.6",
     "babel-tape-runner": "^2.0.0",
