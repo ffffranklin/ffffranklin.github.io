@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "serve": "gulp serve",
     "test": "gulp test",
     "codeclimate": "gulp codeclimate"
   },
