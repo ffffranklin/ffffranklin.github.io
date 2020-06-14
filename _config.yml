@@ -20,7 +20,6 @@ exclude:
   - "Gemfile.lock"
   - "README.md"
   - "bower.json"
-  - "modernizr.json"
   - "package.json"
   - "webpack.config.js"
   - "gulpfile.js"
