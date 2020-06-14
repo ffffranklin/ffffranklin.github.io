@@ -68,11 +68,3 @@ gulp.task('default', gulp.series('lint', 'test'));
 gulp.task('watch', gulp.series('lint', 'test', function() {
   gulp.watch(jsFiles, ['lint', 'test'], browserSync.reload);
 }));
-
-gulp.task('cover', shell.task([
-  'istanbul cover babel-tape-runner -- "_test/**/*.test.js"'
-]));
-
-gulp.task('codeclimate', gulp.series('cover', shell.task([
-  'codeclimate-test-reporter < coverage/lcov.info'
-])));
