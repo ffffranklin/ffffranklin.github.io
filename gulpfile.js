@@ -1,11 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var shell = require('gulp-shell');
 var eslint = require('gulp-eslint');
 var gulpIf = require('gulp-if');
-var browserSync = require('browser-sync').create();
 
 var jsFiles = [
   'gulpfile.js',
@@ -38,12 +36,6 @@ gulp.task('jekyll:build', shell.task([
   'jekyll build . --trace --safe'
 ]));
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    proxy: 'localhost:4000'
-  });
-});
-
 gulp.task('lint', function() {
   return gulp.src(jsFiles).
     pipe(eslint()).
@@ -59,12 +51,12 @@ gulp.task('lint:fix', function() {
     pipe(gulpIf(isFixed, gulp.dest('./')));
 });
 
-gulp.task('serve', gulp.series('pack:server','jekyll:serve', 'browser-sync'));
+gulp.task('serve', gulp.series('pack:server','jekyll:serve'));
 
 gulp.task('build', gulp.series('test', 'jekyll:build', 'pack:build'));
 
 gulp.task('default', gulp.series('lint', 'test'));
 
 gulp.task('watch', gulp.series('lint', 'test', function() {
-  gulp.watch(jsFiles, ['lint', 'test'], browserSync.reload);
+  gulp.watch(jsFiles, ['lint', 'test']);
 }));
