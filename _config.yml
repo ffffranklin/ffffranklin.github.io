@@ -15,7 +15,6 @@ markdown: kramdown
 
 exclude:
   - "node_modules"
-  - "coverage"
   - "CNAME"
   - "Gemfile"
   - "Gemfile.lock"
