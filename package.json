@@ -33,7 +33,7 @@
     "faucet": "0.0.1",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
-    "gulp-if": "^2.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-shell": "^0.7.1",
     "gulp-util": "^3.0.6",
     "rewire": "^2.5.1",
