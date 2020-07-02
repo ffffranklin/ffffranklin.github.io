@@ -10,7 +10,6 @@
 /.sass-cache
 /.env
 /node_modules
-/coverage
 
 # jekyll
 /_site
