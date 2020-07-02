@@ -15,13 +15,11 @@ markdown: kramdown
 
 exclude:
   - "node_modules"
-  - "coverage"
   - "CNAME"
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"
   - "bower.json"
-  - "modernizr.json"
   - "package.json"
   - "webpack.config.js"
   - "gulpfile.js"

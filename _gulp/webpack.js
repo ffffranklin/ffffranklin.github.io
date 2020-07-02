@@ -33,9 +33,9 @@ exports.build = function build(cb) {
       "process.env": {
         "NODE_ENV": JSON.stringify("production")
       }
-    }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    })
+    // new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.UglifyJsPlugin()
   );
 
   // run webpack
