@@ -51,7 +51,7 @@ gulp.task('lint:fix', function() {
     pipe(gulpIf(isFixed, gulp.dest('./')));
 });
 
-gulp.task('serve', gulp.series('pack:server','jekyll:serve'));
+gulp.task('serve', gulp.parallel('pack:server','jekyll:serve'));
 
 gulp.task('build', gulp.series('test', 'jekyll:build', 'pack:build'));
 
