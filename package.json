@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.2",
     "babel-tape-runner": "^3.0.0",
     "eslint": "^7.3.1",
     "eslint-config-defaults": "^9.0.0",
