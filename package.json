@@ -34,7 +34,7 @@
     "gulp-if": "^3.0.0",
     "gulp-shell": "^0.8.0",
     "gulp-util": "^3.0.6",
-    "rewire": "^5.0.0",
+    "rewire": "^6.0.0",
     "sinon": "^11.1.2",
     "tape": "^5.0.1",
     "webpack": "^4.43.0",
