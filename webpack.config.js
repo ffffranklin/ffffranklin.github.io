@@ -1,14 +1,14 @@
-var path = require('path');
+const path = require('path');
 module.exports = {
   mode: 'production',
   entry: path.join(__dirname, '/_es6/index.js'),
   output: {
     path: path.join(__dirname, '/js'),
     publicPath: 'js/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   optimization: {
-    minimize: true
+    minimize: true,
   },
   module: {
     rules: [
@@ -17,12 +17,12 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
-  plugins: []
+  plugins: [],
 };
 
