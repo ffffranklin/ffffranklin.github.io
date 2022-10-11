@@ -57,13 +57,10 @@ exports.server = function server() {
   // @todo https://webpack.js.org/migrate/3/#debug
   // config.debug = true;
 
+  var server = new WebpackDevServer({}, webpack(config));
+
   // Start a webpack-dev-server
-  new WebpackDevServer(webpack(config), {
-    publicPath: "/" + config.output.publicPath,
-    stats: {
-      colors: true
-    }
-  }).listen(9876, "localhost", function(err) {
+  server.start(9876, "localhost", function(err) {
     if(err) {throw new gutil.PluginError("pack:server", err);}
     gutil.log("[pack:server]", "http://localhost:9876/webpack-dev-server/index.html");
   });
