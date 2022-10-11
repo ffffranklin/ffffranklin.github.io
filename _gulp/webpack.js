@@ -4,7 +4,8 @@ const gutil = require('gulp-util');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('../webpack.config.js');
-const exports = module.exports = {};
+/* eslint-disable no-var */
+var exports = module.exports = {};
 
 const myDevConfig = Object.create(webpackConfig);
 
