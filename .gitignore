@@ -13,3 +13,5 @@
 
 # jekyll
 /_site
+
+/dist

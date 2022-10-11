@@ -1,6 +1,7 @@
 'use strict';
 
-const gutil = require('gulp-util');
+const log = require('fancy-log');
+const PluginError = require('plugin-error');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('../webpack.config.js');
@@ -18,9 +19,9 @@ const devCompiler = webpack(myDevConfig);
 exports.buildDev = function buildDev(cb) {
   devCompiler.run(function(err, stats) {
     if (err) {
-      throw new gutil.PluginError('pack:build-dev', err);
+      throw new PluginError('pack:build-dev', err);
     }
-    gutil.log('[pack:build-dev]', stats.toString({
+    log('[pack:build-dev]', stats.toString({
       colors: true,
     }));
     cb();
@@ -44,9 +45,9 @@ exports.build = function build(cb) {
   // run webpack
   webpack(config, function(err, stats) {
     if (err) {
-      throw new gutil.PluginError('pack:build', err);
+      throw new PluginError('pack:build', err);
     }
-    gutil.log('[pack:build]', stats.toString({
+    log('[pack:build]', stats.toString({
       colors: true,
     }));
     cb();
@@ -66,8 +67,8 @@ exports.server = function server() {
   // Start a webpack-dev-server
   server.start(9876, 'localhost', function(err) {
     if (err) {
-      throw new gutil.PluginError('pack:server', err);
+      throw new PluginError('pack:server', err);
     }
-    gutil.log('[pack:server]', 'http://localhost:9876/webpack-dev-server/index.html');
+    log('[pack:server]', 'http://localhost:9876/webpack-dev-server/index.html');
   });
 };
