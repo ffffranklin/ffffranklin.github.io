@@ -36,7 +36,7 @@
     "gulp-util": "^3.0.6",
     "rewire": "^6.0.0",
     "sinon": "^11.1.2",
-    "tape": "^5.0.1",
+    "tape": "^5.6.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^4.11.1"
