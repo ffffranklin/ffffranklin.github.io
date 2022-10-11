@@ -1,15 +1,15 @@
 'use strict';
 
-var test = require('tape');
-var rewire = require('rewire');
-var index = rewire('../../../_es6/index.js');
+const test = require('tape');
+const rewire = require('rewire');
+const index = rewire('../../../_es6/index.js');
 
 index.__set__({
   $: {
     fn: {
-      toggleClass: function() {}
-    }
-  }
+      toggleClass: function() {},
+    },
+  },
 });
 
 test('main function', function(t) {
@@ -18,7 +18,7 @@ test('main function', function(t) {
 });
 
 test('class toggler returns handler', function(assert) {
-  var result = index.classToggler({}, 'open closed');
+  const result = index.classToggler({}, 'open closed');
 
   assert.equal(typeof result, 'function');
   assert.end();
