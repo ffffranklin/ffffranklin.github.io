@@ -1,18 +1,18 @@
-"use strict";
+'use strict';
 
-//import { pick } from 'lodash';
+// import { pick } from 'lodash';
 
-var $ = require('jquery');
+const $ = require('jquery');
 
-var classToggler = function classToggler($el, classes) {
+const classToggler = function classToggler($el, classes) {
   return $.fn.toggleClass.bind($el, classes);
 };
 
-var __main__ = function __main__() {
-  var handler = classToggler($('.drawer-trigger'), 'opened closed');
+const __main__ = function __main__() {
+  const handler = classToggler($('.drawer-trigger'), 'opened closed');
 
   $('.drawer-trigger').
-    on('click', handler);
+      on('click', handler);
 };
 
 exports.classToggler = classToggler;

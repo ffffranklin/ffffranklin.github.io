@@ -27,6 +27,7 @@
     "babel-loader": "^8.2.5",
     "babel-tape-runner": "^3.0.0",
     "eslint": "^8.25.0",
+    "eslint-config-google": "^0.14.0",
     "faucet": "0.0.3",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
