@@ -5,8 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "jekyll:build": "jekyll build . --trace --safe",
+    "jekyll:serve": "jekyll serve -w --trace --drafts --config _config.yml,_config.dev.yml .",
     "serve": "gulp serve",
-    "test": "gulp test"
+    "test": "node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet"
   },
   "repository": {
     "type": "git",
