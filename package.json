@@ -10,6 +10,7 @@
     "pack:build": "NODE_ENV=production ./node_modules/.bin/webpack",
     "pack:build-dev": "./node_modules/.bin/webpack",
     "pack:server": "./node_modules/.bin/webpack-dev-server --port=9876 --devtool=eval",
+    "lint": "eslint .",
     "serve": "gulp serve",
     "test": "node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet"
   },
