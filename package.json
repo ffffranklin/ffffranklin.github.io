@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "watch": {
-    "check": "{gulpfile.js,{_gulp,_es6,_test}/*.js}"
+    "check": "{_es6,_test}/*.js"
   },
   "scripts": {
     "jekyll:build": "jekyll build . --trace --safe",
@@ -44,10 +44,6 @@
     "eslint-config-google": "^0.14.0",
     "fancy-log": "^2.0.0",
     "faucet": "0.0.3",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-if": "^3.0.0",
-    "gulp-shell": "^0.8.0",
     "npm-watch": "^0.11.0",
     "plugin-error": "^2.0.0",
     "rewire": "^6.0.0",

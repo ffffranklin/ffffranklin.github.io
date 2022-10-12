@@ -8,7 +8,9 @@ Blog and open source project showcase.
 
 Steps to get started
 
- 1.  `npm install -g gulp`
- 2.  `gem install bundler`
- 3.  `npm install && bundle install`
- 4.  `gulp serve`
+ 1.  `gem install bundler`
+ 1.  `npm install && bundle install`
+ 1.  `npm run serve`
+
+For developing
+ 1.  `npm run watch:dev`

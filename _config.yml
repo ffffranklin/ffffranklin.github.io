@@ -22,7 +22,6 @@ exclude:
   - "bower.json"
   - "package.json"
   - "webpack.config.js"
-  - "gulpfile.js"
 
 # Custom variables
 assets_url: ''
