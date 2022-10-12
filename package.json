@@ -4,6 +4,9 @@
   "description": "Flagship blog and project website",
   "main": "index.js",
   "private": true,
+  "watch": {
+    "check": "{gulpfile.js,{_gulp,_es6,_test}/*.js}"
+  },
   "scripts": {
     "jekyll:build": "jekyll build . --trace --safe",
     "jekyll:serve": "jekyll serve -w --trace --drafts --config _config.yml,_config.dev.yml .",
@@ -15,6 +18,8 @@
     "serve": "npm run pack:server & npm run jekyll:serve",
     "build": "npm run test && npm run jekyll:build && npm run pack:build",
     "check": "npm run lint && npm run test",
+    "watch": "npm-watch",
+    "watch:dev": "npm run watch check",
     "test": "node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet"
   },
   "repository": {
@@ -43,6 +48,7 @@
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
     "gulp-shell": "^0.8.0",
+    "npm-watch": "^0.11.0",
     "plugin-error": "^2.0.0",
     "rewire": "^6.0.0",
     "sinon": "^14.0.1",
