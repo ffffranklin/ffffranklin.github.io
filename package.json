@@ -11,6 +11,7 @@
     "pack:build-dev": "./node_modules/.bin/webpack",
     "pack:server": "./node_modules/.bin/webpack-dev-server --port=9876 --devtool=eval",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "serve": "gulp serve",
     "test": "node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet"
   },
