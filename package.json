@@ -12,7 +12,9 @@
     "pack:server": "./node_modules/.bin/webpack-dev-server --port=9876 --devtool=eval",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "serve": "gulp serve",
+    "serve": "npm run pack:server & npm run jekyll:serve",
+    "build": "npm run test && npm run jekyll:build && npm run pack:build",
+    "check": "npm run lint && npm run test",
     "test": "node node_modules/babel-tape-runner/bin/babel-tape-runner _test/**/*.js | faucet"
   },
   "repository": {
