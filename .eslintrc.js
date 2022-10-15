@@ -4,7 +4,7 @@ module.exports = {
     'es2020': true,
     'node': true,
   },
-  'extends': ['eslint:recommended', 'google'],
+  'extends': ['eslint:recommended', 'google', 'next'],
   'overrides': [
   ],
   'parserOptions': {
