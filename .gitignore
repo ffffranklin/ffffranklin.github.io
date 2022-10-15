@@ -13,7 +13,9 @@
 
 # jekyll
 /_site
-
 /dist
+
+# next.js
+/.next
 
 TODO.diff
