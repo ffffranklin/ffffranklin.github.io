@@ -8,6 +8,10 @@
     "check": "{_es6,_test}/*.js"
   },
   "scripts": {
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
     "jekyll:build": "jekyll build . --trace --safe",
     "jekyll:serve": "jekyll serve -w --trace --drafts --config _config.yml,_config.dev.yml .",
     "pack:build": "NODE_ENV=production ./node_modules/.bin/webpack",
