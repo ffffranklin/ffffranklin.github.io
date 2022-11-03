@@ -1,0 +1,39 @@
+.longShadowLogo {
+  width:110px;
+  perspective: 1000px;
+  margin: 0 auto;
+
+  &,
+  & .front,
+  & .back {
+    height:110px;
+  }
+
+  .flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in;
+    // trigger rotation
+  }
+
+  &.hover .flipper, &:hover .flipper {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+
+  .front, .back {
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+
+  .back { transform: rotateY(180deg); }
+}
