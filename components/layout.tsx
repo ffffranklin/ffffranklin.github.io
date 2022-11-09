@@ -34,7 +34,7 @@ export function Layout({children}) {
       </Head>
       <div className={styles.siteWrapper}>
 
-        <header className="simple-header">
+        <header className={styles.simpleHeader}>
           <LogoFlip/>
         </header>
 
