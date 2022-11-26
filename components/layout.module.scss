@@ -30,3 +30,12 @@
   padding: 3rem 0 2.3rem;
   text-align: center;
 }
+
+.contentWrapper {
+  width: 100%;
+  padding:0 1rem;
+
+  @media only screen and (min-width: 40.0625em) {
+    width: 58.3333333333%;
+  }
+}
