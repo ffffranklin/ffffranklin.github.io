@@ -39,7 +39,7 @@ export function Layout({children}) {
         </header>
 
         <div className="page-content ">
-          <div className="wrapper">
+          <div className={styles.contentWrapper}>
             {children}
           </div>
         </div>
