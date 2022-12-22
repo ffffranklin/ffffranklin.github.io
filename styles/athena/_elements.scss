@@ -1,0 +1,28 @@
+@import "global";
+
+.logo-ffff {
+  @include hide-children;
+  @include logo-circle(17);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  font-family: $font-family-one;
+  border-radius: 7px;
+  border: 1px solid $color-bg-three;
+  background: transparent;
+  color: $color-font-one;
+  &:hover {
+    border: 1px solid $color-bg-two;
+    color: $color-font-four;
+    @include single-transition(all, 70ms);
+  }
+}
+
+.btn-grid {
+  display: block;
+}
