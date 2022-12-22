@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/ffffranklin/ffffranklin.github.io#readme",
   "devDependencies": {
-    "@babel/core": "^7.14.8",
+    "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.19.4",
     "@types/react": "18.0.21",
     "babel-loader": "^8.2.5",
