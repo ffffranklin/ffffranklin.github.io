@@ -1,4 +1,56 @@
+:root {
+  --font-family-open-sans: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  --font-family-martel: "Martel", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-hack: "Hack", Consolas, "Liberation Mono", Courier, monospace;
+}
+
 body {
   padding: 0;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: var(--font-family-martel);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: .5rem;
+  margin-top: .2rem;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reset */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height:1.4
+  }
+  h1 {
+    font-size:2.75rem
+  }
+  h2 {
+    font-size:2.3125rem
+  }
+  h3 {
+    font-size:1.6875rem
+  }
+  h4 {
+    font-size:1.4375rem
+  }
+  h5 {
+    font-size:1.125rem
+  }
+  h6 {
+    font-size:1rem
+  }
 }

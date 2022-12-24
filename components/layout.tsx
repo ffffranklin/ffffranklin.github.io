@@ -30,9 +30,6 @@ export function Layout({children}) {
           name="google-site-verification"
           content="h4nQlHxZ3EiPehxMmDG7-Cq2f-KgEEv4wl3LI1nwybM"
         />
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-hack/2.013/css/hack-extended.min.css"/>
-        <link rel="canonical" href="http://ffffranklin.com/" />
       </Head>
       <div className={styles.siteWrapper}>
 
