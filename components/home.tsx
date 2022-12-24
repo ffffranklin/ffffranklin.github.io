@@ -1,4 +1,5 @@
-import './home.module.scss';
+import styles from './home.module.scss';
+
 /**
  *
  * @constructor
@@ -6,8 +7,8 @@ import './home.module.scss';
 export function Home() {
   return (
     <>
-      <section className="intro row">
-        <div className="wrapper small-12 medium-7 medium-centered columns">
+      <section className={styles.intro}>
+        <div className="wrapper">
           <h1>Franklin Clark</h1>
           <p className="content">
             Looks like you're a little early! My site is still being built. In
