@@ -13,6 +13,15 @@
     font-size: $font-size-normal;
     line-height: 2.1rem;
   }
+
+   a {
+     text-decoration: none;
+     color: $horizon;
+
+     &:hover {
+       color: scale-color($horizon, $lightness: -14%);
+     }
+   }
 }
 
 .introBtnWrapper {
@@ -34,12 +43,15 @@
   font-family: $font-family-one;
   border-radius: 7px;
   border: 1px solid $color-bg-three;
+  text-decoration: none;
   background: transparent;
   color: $color-font-one;
 
   &:hover {
-    border: 1px solid $color-bg-two;
-    color: $color-font-four;
+    border-width: 1px;
+    border-style: solid;
+    border-color: scale-color($horizon, $lightness: -20%);
+    color: scale-color($color-font-four, $lightness: -20%);
     transition: all 70ms ease-out
   }
 }
