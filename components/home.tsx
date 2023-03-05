@@ -19,8 +19,8 @@ export function Home() {
         </div>
       </section>
       <section className="contact row">
-        <div className="wrapper columns medium-centered medium-2">
-          <a href="mailto:ffffranklin@pobox.com" className="btn btn-primary btn-grid">
+        <div className={styles.introBtnWrapper}>
+          <a href="mailto:ffffranklin@pobox.com" className={styles.introBtn}>
             Contact
           </a>
         </div>

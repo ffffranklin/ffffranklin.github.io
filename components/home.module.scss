@@ -14,3 +14,32 @@
     line-height: 2.1rem;
   }
 }
+
+.introBtnWrapper {
+  width: 100%;
+  margin: auto;
+
+  @media only screen and (min-width: 40.0625em) {
+    width: 24%;
+  }
+}
+
+.introBtn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  font-family: $font-family-one;
+  border-radius: 7px;
+  border: 1px solid $color-bg-three;
+  background: transparent;
+  color: $color-font-one;
+
+  &:hover {
+    border: 1px solid $color-bg-two;
+    color: $color-font-four;
+    transition: all 70ms ease-out
+  }
+}
