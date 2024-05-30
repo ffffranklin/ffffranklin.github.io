@@ -1,5 +1,5 @@
 import styles from './logo-flip.module.scss';
-import {useState} from "react";
+import {useState} from 'react';
 /**
  *
  * @constructor
@@ -12,7 +12,7 @@ export function LogoFlip() {
   };
 
   return (
-    <div className={[styles.longShadowLogo, isActive ? "hover" : null].join(' ')} onMouseEnter={handleToggle} onMouseLeave={handleToggle}>
+    <div className={[styles.longShadowLogo, isActive ? 'hover' : null].join(' ')} onMouseEnter={handleToggle} onMouseLeave={handleToggle}>
       <div className={styles.flipper}>
         <div className={[styles.front, 'content'].join(' ')}>
           <a href="https://github.com/ffffranklin" target="_blank" rel="noreferrer">
