@@ -45,7 +45,7 @@
     "@types/react": "18.3.3",
     "babel-loader": "^9.1.0",
     "babel-tape-runner": "^3.0.0",
-    "eslint": "^8.0.0",
+    "eslint": "^9.5.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-next": "^14.2.3",
     "fancy-log": "^2.0.0",
