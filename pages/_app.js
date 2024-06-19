@@ -1,5 +1,8 @@
 import '../styles.css';
 import { AppProps } from 'next/app';
+import { Martel } from 'next/font/google';
+
+const martel = Martel({ weight: ['400','900'], subsets: ['latin']});
 
 /**
  *
@@ -11,5 +14,9 @@ import { AppProps } from 'next/app';
  * @constructor
  */
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <main className={martel.className}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
