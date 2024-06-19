@@ -18,6 +18,7 @@ export function Layout({children}) {
   return (
     <>
       <Head>
+        <title>Franklin Clark</title>
         <meta charSet="utf-8"/>
         <meta name="viewport" content={viewport}/>
 
