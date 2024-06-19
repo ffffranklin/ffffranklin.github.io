@@ -17,5 +17,6 @@
 
 # next.js
 /.next
+/out
 
 TODO.diff
