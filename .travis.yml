@@ -1,8 +1,0 @@
-language: node_js
-node_js:
-  - "stable"
-  # - "0.5"
-before_script:
-  - npm install -g babel-tape-runner gulp
-script:
-  - npm test
