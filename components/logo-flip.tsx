@@ -1,6 +1,6 @@
 import styles from './logo-flip.module.scss';
 import Image from 'next/image';
-import { useState } from 'react';
+import {useState} from 'react';
 
 /**
  *
@@ -14,11 +14,20 @@ export function LogoFlip() {
   };
 
   return (
-    <div className={[styles.longShadowLogo, isActive ? 'hover' : null].join(' ')} onMouseEnter={handleToggle} onMouseLeave={handleToggle}>
+    <div
+      className={[styles.longShadowLogo, isActive ? 'hover' : null].join(' ')}
+      onMouseEnter={handleToggle}
+      onMouseLeave={handleToggle}
+    >
       <div className={styles.flipper}>
         <div className={[styles.front, 'content'].join(' ')}>
           <a href="https://github.com/ffffranklin" target="_blank" rel="noreferrer">
-            <Image height={110} width={110} alt="Franklin Clark Logo" src="/img/logo-ffff-shadow.svg"/>
+            <Image
+              height={110}
+              width={110}
+              alt="Franklin Clark Logo"
+              src="/img/logo-ffff-shadow.svg"
+            />
           </a>
         </div>
         <div className={[styles.back, 'content'].join(' ')}>

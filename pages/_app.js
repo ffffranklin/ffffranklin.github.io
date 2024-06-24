@@ -1,8 +1,9 @@
 import '../styles.css';
-import { AppProps } from 'next/app';
-import { Martel } from 'next/font/google';
+// eslint-disable-next-line no-unused-vars
+import {AppProps} from 'next/app';
+import {Martel} from 'next/font/google';
 
-const martel = Martel({ weight: ['400','900'], subsets: ['latin']});
+const martel = new Martel({weight: ['400', '900'], subsets: ['latin']});
 
 /**
  *
@@ -13,7 +14,7 @@ const martel = Martel({ weight: ['400','900'], subsets: ['latin']});
  * @return {JSX.Element}
  * @constructor
  */
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({Component, pageProps}) {
   return (
     <main className={martel.className}>
       <Component {...pageProps} />
