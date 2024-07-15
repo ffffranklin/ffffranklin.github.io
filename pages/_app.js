@@ -3,7 +3,8 @@ import '../styles.css';
 import {AppProps} from 'next/app';
 import {Martel} from 'next/font/google';
 
-const martel = new Martel({weight: ['400', '900'], subsets: ['latin']});
+// eslint-disable-next-line new-cap
+const martel = Martel({weight: ['400', '900'], subsets: ['latin']});
 
 /**
  *
