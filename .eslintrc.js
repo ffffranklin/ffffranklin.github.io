@@ -1,3 +1,3 @@
 module.exports = {
-  'extends': ['next', 'google'],
+  'extends': ['next', 'google', 'eslint:recommended'],
 };
