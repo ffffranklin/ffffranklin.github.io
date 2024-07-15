@@ -1,5 +1,6 @@
 import {Metadata} from 'next';
 import * as site from '../package.json';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Franklin Clark',
