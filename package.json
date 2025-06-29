@@ -8,6 +8,7 @@
     "check": "{_es6,_test}/*.js"
   },
   "scripts": {
+    "ci:build": "npm run next:build --no-lint",
     "next:dev": "next dev",
     "next:build": "next build",
     "next:start": "next start",
