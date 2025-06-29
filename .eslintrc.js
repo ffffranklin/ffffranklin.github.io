@@ -1,3 +1,6 @@
 module.exports = {
-  'extends': ['next', 'google', 'eslint:recommended'],
+  'extends': [
+    'next/core-web-vitals',
+    'next/typescript'
+  ],
 };

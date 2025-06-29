@@ -1,5 +1,5 @@
 import '../styles.css';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {AppProps} from 'next/app';
 import {Martel} from 'next/font/google';
 
