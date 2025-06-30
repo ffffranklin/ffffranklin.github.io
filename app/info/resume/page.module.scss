@@ -61,10 +61,12 @@
   $definition-list-header-margin-bottom: .3rem !default;
   $definition-list-margin-bottom: unit.rem-calc(12) !default;
 
+  font-family: variables.$font-family-martel;
   background: {
     color: #fff;
   }
 
+  /* this doesnt work here but I want to remember it until I can figure out an alt sol */
   @page {
     size: auto;
     margin: 10mm 10mm 10mm 10mm;
