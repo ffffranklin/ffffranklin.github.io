@@ -2,70 +2,80 @@
 @use '../../../styles/foundation/global';
 @use '../../../styles/foundation/util/unit';
 
+$default-float: left;
+
+$header-font-family: variables.$font-family-one;
+$header-font-weight: variables.$heading-weight;
+$header-font-style: normal !default;
+$header-font-color: variables.$gray-base !default;
+$header-line-height: 1.4 !default;
+$header-top-margin: .2rem !default;
+$header-bottom-margin: .5rem !default;
+$header-text-rendering: optimizeLegibility !default;
+
+// We use these to control header font sizes
+$h1-font-size: unit.rem-calc(44) !default;
+$h2-font-size: unit.rem-calc(37) !default;
+$h3-font-size: unit.rem-calc(27) !default;
+$h4-font-size: unit.rem-calc(23) !default;
+$h5-font-size: unit.rem-calc(18) !default;
+$h6-font-size: 1rem !default;
+
+// We use these to control header size reduction on small screens
+$h1-font-reduction: unit.rem-calc(10) !default;
+$h2-font-reduction: unit.rem-calc(10) !default;
+$h3-font-reduction: unit.rem-calc(5) !default;
+$h4-font-reduction: unit.rem-calc(5) !default;
+$h5-font-reduction: 0 !default;
+$h6-font-reduction: 0 !default;
+
+// We use these to style paragraphs
+$paragraph-font-family: inherit !default;
+$paragraph-font-weight: global.$font-weight-normal !default;
+$paragraph-font-size: 1rem !default;
+$paragraph-line-height: 1.6 !default;
+$paragraph-margin-bottom: unit.rem-calc(20) !default;
+$paragraph-aside-font-size: unit.rem-calc(14) !default;
+$paragraph-aside-line-height: 1.35 !default;
+$paragraph-aside-font-style: italic !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+// We use these to style anchors
+//$anchor-text-decoration: none !default;
+$anchor-text-decoration: underline;
+$anchor-text-decoration-hover: none !default;
+//$anchor-font-color: global.$primary-color !default;
+$anchor-font-color: variables.$color-font-four;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
+
+// We use these to style lists
+$list-font-family: $paragraph-font-family !default;
+$list-font-size: $paragraph-font-size !default;
+$list-line-height: $paragraph-line-height !default;
+$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-style-position: outside !default;
+$list-side-margin: 1.1rem !default;
+$list-ordered-side-margin: 1.4rem !default;
+$list-side-margin-no-bullet: 0 !default;
+$list-nested-margin: unit.rem-calc(20) !default;
+$definition-list-header-weight: global.$font-weight-bold !default;
+$definition-list-header-margin-bottom: .3rem !default;
+$definition-list-margin-bottom: unit.rem-calc(12) !default;
+
+.resumeWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .resume {
-  $default-float: left;
-
-  $header-font-family: variables.$font-family-one;
-  $header-font-weight: variables.$heading-weight;
-  $header-font-style: normal !default;
-  $header-font-color: variables.$gray-base !default;
-  $header-line-height: 1.4 !default;
-  $header-top-margin: .2rem !default;
-  $header-bottom-margin: .5rem !default;
-  $header-text-rendering: optimizeLegibility !default;
-
-  // We use these to control header font sizes
-  $h1-font-size: unit.rem-calc(44) !default;
-  $h2-font-size: unit.rem-calc(37) !default;
-  $h3-font-size: unit.rem-calc(27) !default;
-  $h4-font-size: unit.rem-calc(23) !default;
-  $h5-font-size: unit.rem-calc(18) !default;
-  $h6-font-size: 1rem !default;
-
-  // We use these to control header size reduction on small screens
-  $h1-font-reduction: unit.rem-calc(10) !default;
-  $h2-font-reduction: unit.rem-calc(10) !default;
-  $h3-font-reduction: unit.rem-calc(5) !default;
-  $h4-font-reduction: unit.rem-calc(5) !default;
-  $h5-font-reduction: 0 !default;
-  $h6-font-reduction: 0 !default;
-
-  // We use these to style paragraphs
-  $paragraph-font-family: inherit !default;
-  $paragraph-font-weight: global.$font-weight-normal !default;
-  $paragraph-font-size: 1rem !default;
-  $paragraph-line-height: 1.6 !default;
-  $paragraph-margin-bottom: unit.rem-calc(20) !default;
-  $paragraph-aside-font-size: unit.rem-calc(14) !default;
-  $paragraph-aside-line-height: 1.35 !default;
-  $paragraph-aside-font-style: italic !default;
-  $paragraph-text-rendering: optimizeLegibility !default;
-
-  // We use these to style anchors
-  //$anchor-text-decoration: none !default;
-  $anchor-text-decoration: underline;
-  $anchor-text-decoration-hover: none !default;
-  //$anchor-font-color: global.$primary-color !default;
-  $anchor-font-color: variables.$color-font-four;
-  $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
-
-  // We use these to style lists
-  $list-font-family: $paragraph-font-family !default;
-  $list-font-size: $paragraph-font-size !default;
-  $list-line-height: $paragraph-line-height !default;
-  $list-margin-bottom: $paragraph-margin-bottom !default;
-  $list-style-position: outside !default;
-  $list-side-margin: 1.1rem !default;
-  $list-ordered-side-margin: 1.4rem !default;
-  $list-side-margin-no-bullet: 0 !default;
-  $list-nested-margin: unit.rem-calc(20) !default;
-  $definition-list-header-weight: global.$font-weight-bold !default;
-  $definition-list-header-margin-bottom: .3rem !default;
-  $definition-list-margin-bottom: unit.rem-calc(12) !default;
-
   font-family: variables.$font-family-two;
   background: {
     color: #fff;
+  }
+
+  @media #{global.$medium-up} {
+    margin-top: 1rem;
+    max-width: 50rem;
   }
 
   /* this doesnt work here but I want to remember it until I can figure out an alt sol */
@@ -211,9 +221,9 @@
   }
 
 
+  // Overrides
 
   h1 { color: variables.$color-font-two !important; }
-  h2 {}
   h3 { font-size: 1.5rem; }
   ul, ol, dl { font-size:0.9rem; }
 
@@ -223,3 +233,4 @@
     h3, h4, p, ul, ol, dl, li {font-size: 85%;}
   }
 }
+

@@ -7,6 +7,8 @@ export default function Page() {
       <style>
         {'@page { size: auto; margin: 10mm 10mm 10mm 10mm; color:red}'}
       </style>
-      <article className={styles.resume}><Resume/></article>
+      <div className={styles.resumeWrapper}>
+        <article className={styles.resume}><Resume/></article>
+      </div>
     </>;
 }
