@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: packageInfo.description,
   authors: {name: packageInfo.author},
   keywords: packageInfo.keywords,
+  icons: { icon: '/img/favico.png' }
 };
 
 /**
