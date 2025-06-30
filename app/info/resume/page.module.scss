@@ -7,7 +7,7 @@ $default-float: left;
 $header-font-family: variables.$font-family-one;
 $header-font-weight: variables.$heading-weight;
 $header-font-style: normal !default;
-$header-font-color: variables.$gray-base !default;
+$header-font-color: variables.$color-font-one !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
 $header-bottom-margin: .5rem !default;
@@ -68,6 +68,7 @@ $definition-list-margin-bottom: unit.rem-calc(12) !default;
 }
 
 .resume {
+  color: variables.$color-font-one;
   font-family: variables.$font-family-two;
   background: {
     color: #fff;
@@ -231,6 +232,7 @@ $definition-list-margin-bottom: unit.rem-calc(12) !default;
     h1 { color: variables.$color-font-two !important; }
     h2 {font-size: 100%;}
     h3, h4, p, ul, ol, dl, li {font-size: 85%;}
+    a { color: variables.$color-font-one }
   }
 }
 
