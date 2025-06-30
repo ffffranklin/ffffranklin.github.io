@@ -1,6 +1,7 @@
 import {Metadata} from 'next';
 import packageInfo from '../package.json';
 import React from 'react';
+import styles from './layout.module.scss';
 
 export const metadata: Metadata = {
   title: 'Franklin Clark',
@@ -20,8 +21,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <>
+      <html lang="en" className={styles.normalize}>
+        <body>
+          {children}
+        </body>
+      </html>
+    </>
   );
 }

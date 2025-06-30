@@ -1,6 +1,9 @@
 @use "../../../styles/variables";
 
 .resume {
+  $header-font-family: variables.$font-family-one;
+  $header-font-weight: variables.$heading-weight;
+
   background: {
     color: #fff;
   }
