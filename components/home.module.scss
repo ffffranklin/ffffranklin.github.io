@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../styles/variables";
 
 .intro {
@@ -19,7 +20,7 @@
      color: $horizon;
 
      &:hover {
-       color: scale-color($horizon, $lightness: -14%);
+       color: color.scale($horizon, $lightness: -14%);
      }
    }
 }
@@ -50,8 +51,8 @@
   &:hover {
     border-width: 1px;
     border-style: solid;
-    border-color: scale-color($horizon, $lightness: -20%);
-    color: scale-color($color-font-four, $lightness: -20%);
+    border-color: color.scale($horizon, $lightness: -20%);
+    color: color.scale($color-font-four, $lightness: -20%);
     transition: all 70ms ease-out
   }
 }
