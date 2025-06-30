@@ -4,6 +4,7 @@
 
 @use 'util/math';
 @use 'util/unit';
+
 //
 // Foundation Variables
 //
@@ -248,16 +249,17 @@ $include-html-global-classes: $include-html-classes !default;
 $column-gutter: unit.rem-calc(30) !default;
 
 // Media Query Ranges
-$small-breakpoint:  unit.zf-bp-to-em(640)  !default;
-$medium-breakpoint: unit.zf-bp-to-em(1024) !default;
-$large-breakpoint:  unit.zf-bp-to-em(1440) !default;
-$xlarge-breakpoint: unit.zf-bp-to-em(1920) !default;
+$small-breakpoint:  unit.em-calc(640)  !default;
+$medium-breakpoint: unit.em-calc(1024) !default;
+$large-breakpoint:  unit.em-calc(1440) !default;
+$xlarge-breakpoint: unit.em-calc(1920) !default;
 
 $small-range:   (0, $small-breakpoint) !default;
-$medium-range:  ($small-breakpoint  + unit.zf-bp-to-em(1), $medium-breakpoint) !default;
-$large-range:   ($medium-breakpoint + unit.zf-bp-to-em(1), $large-breakpoint)  !default;
-$xlarge-range:  ($large-breakpoint  + unit.zf-bp-to-em(1), $xlarge-breakpoint) !default;
-$xxlarge-range: ($xlarge-breakpoint + unit.zf-bp-to-em(1), unit.zf-bp-to-em(99999999)) !default;
+$medium-range:  ($small-breakpoint, $medium-breakpoint) !default;
+$large-range:   ($medium-breakpoint, $large-breakpoint)  !default;
+$xlarge-range:  ($large-breakpoint, $xlarge-breakpoint) !default;
+// this is problematic to calculate for some reason
+//$xxlarge-range: ($xlarge-breakpoint, unit.em-calc(99999999)) !default;
 
 $screen: "only screen" !default;
 
@@ -276,8 +278,6 @@ $large-only: "#{$screen} and (min-width:#{unit.lower-bound($large-range)}) and (
 $xlarge-up: "#{$screen} and (min-width:#{unit.lower-bound($xlarge-range)})" !default;
 $xlarge-only: "#{$screen} and (min-width:#{unit.lower-bound($xlarge-range)}) and (max-width:#{unit.upper-bound($xlarge-range)})" !default;
 
-$xxlarge-up: "#{$screen} and (min-width:#{unit.lower-bound($xxlarge-range)})" !default;
-$xxlarge-only: "#{$screen} and (min-width:#{unit.lower-bound($xxlarge-range)}) and (max-width:#{unit.upper-bound($xxlarge-range)})" !default;
 
 $retina: (
   "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
