@@ -74,9 +74,14 @@ $definition-list-margin-bottom: unit.rem-calc(12) !default;
     color: #fff;
   }
 
+  @media #{global.$small-up} {
+    padding: 0.5rem 1rem;
+  }
+
   @media #{global.$medium-up} {
     margin-top: 1rem;
     max-width: 50rem;
+    padding: 0;
   }
 
   /* this doesnt work here but I want to remember it until I can figure out an alt sol */
