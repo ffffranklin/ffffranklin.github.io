@@ -1,4 +1,5 @@
 import styles from './home.module.scss';
+import Head from "next/head";
 
 /**
  *
@@ -7,6 +8,9 @@ import styles from './home.module.scss';
 export function Home() {
   return (
     <>
+      <Head>
+        <title>Franklin Clark | Software Engineer</title>
+      </Head>
       <section className={styles.intro}>
         <div className="wrapper">
           <h1>Franklin Clark</h1>
