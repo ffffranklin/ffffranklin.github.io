@@ -3,7 +3,7 @@
 @use '../../../styles/foundation/util/unit';
 
 .resume {
-   $default-float: left;
+  $default-float: left;
 
   $header-font-family: variables.$font-family-one;
   $header-font-weight: variables.$heading-weight;
@@ -42,9 +42,11 @@
   $paragraph-text-rendering: optimizeLegibility !default;
 
   // We use these to style anchors
-  $anchor-text-decoration: none !default;
+  //$anchor-text-decoration: none !default;
+  $anchor-text-decoration: underline;
   $anchor-text-decoration-hover: none !default;
-  $anchor-font-color: global.$primary-color !default;
+  //$anchor-font-color: global.$primary-color !default;
+  $anchor-font-color: variables.$color-font-four;
   $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
 
   // We use these to style lists
@@ -61,7 +63,7 @@
   $definition-list-header-margin-bottom: .3rem !default;
   $definition-list-margin-bottom: unit.rem-calc(12) !default;
 
-  font-family: variables.$font-family-martel;
+  font-family: variables.$font-family-two;
   background: {
     color: #fff;
   }
