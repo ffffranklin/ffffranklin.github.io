@@ -1,4 +1,4 @@
-@use "./athena/colors";
-//@use "./athena/elements";
-@use "./athena/mixins";
-@use "./athena/type";
+@forward "./athena/colors";
+//@forward "./athena/elements";
+@forward "./athena/mixins";
+@forward "./athena/type";

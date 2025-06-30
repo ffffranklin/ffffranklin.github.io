@@ -11,16 +11,16 @@
   }
 
   p {
-    font-size: $font-size-normal;
+    font-size: variables.$font-size-normal;
     line-height: 2.1rem;
   }
 
    a {
      text-decoration: none;
-     color: $horizon;
+     color: variables.$horizon;
 
      &:hover {
-       color: color.scale($horizon, $lightness: -14%);
+       color: color.scale(variables.$horizon, $lightness: -14%);
      }
    }
 }
@@ -41,18 +41,18 @@
   text-align: center;
   letter-spacing: 0.03rem;
   font-weight: 500;
-  font-family: $font-family-one;
+  font-family: variables.$font-family-one;
   border-radius: 7px;
-  border: 1px solid $color-bg-three;
+  border: 1px solid variables.$color-bg-three;
   text-decoration: none;
   background: transparent;
-  color: $color-font-one;
+  color: variables.$color-font-one;
 
   &:hover {
     border-width: 1px;
     border-style: solid;
-    border-color: color.scale($horizon, $lightness: -20%);
-    color: color.scale($color-font-four, $lightness: -20%);
+    border-color: color.scale(variables.$horizon, $lightness: -20%);
+    color: color.scale(variables.$color-font-four, $lightness: -20%);
     transition: all 70ms ease-out
   }
 }
