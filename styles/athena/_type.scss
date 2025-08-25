@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800,300|Martel:400,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800,300|Martel:200,300,400,600,700,800,900');
 
 // We use these to define default font stacks
 $font-family-open-sans: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -16,6 +16,14 @@ $font-size-normal: 1.05rem;
 $font-size-large: 1.25rem;
 $font-size-xlarge: 1.7rem;
 $font-size-xxlarge: 2rem;
+$font-size-huge: 3rem;
 
-$heading-weight: 800;
+$heading-weight-black: 900;
+$heading-weight-extra-bold: 800;
+$heading-weight-bold: 700;
+$heading-weight-semi-bold: 600;
+$heading-weight-regular: 400;
+$heading-weight-light: 300;
+$heading-weight-extra-light: 200;
+$heading-weight: $heading-weight-extra-bold;
 

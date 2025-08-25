@@ -1,6 +1,6 @@
 import styles from './resume-jake.module.scss';
-import React from "react";
-import ResumeContent from "../../../../../markdown/resume.mdx";
+import React from 'react';
+import ResumeContent from '../../../../../markdown/resume-hand-revised.mdx';
 
 export default function ResumeJake() {
   return (
@@ -9,5 +9,5 @@ export default function ResumeJake() {
         <ResumeContent />
       </article>
     </div>
-  )
+  );
 }
