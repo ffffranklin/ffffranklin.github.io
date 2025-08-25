@@ -1,17 +1,20 @@
 import ResumeWrapper from './page/resume-wrapper';
-import React from "react";
-import {Metadata} from "next";
+import React, { Suspense } from 'react';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Franklin Clark | Software Engineer | Resume',
 };
 
 export default function Page() {
-
-    return <>
+  return (
+    <>
       <style>
         {'@page { size: auto; margin: 10mm 10mm 10mm 10mm; color:red}'}
       </style>
-      <ResumeWrapper />
-    </>;
+      <Suspense>
+        <ResumeWrapper />
+      </Suspense>
+    </>
+  );
 }
