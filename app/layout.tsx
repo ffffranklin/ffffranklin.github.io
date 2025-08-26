@@ -5,7 +5,7 @@ import styles from './layout.module.scss';
 import { Martel, Open_Sans } from 'next/font/google';
 
 const martel = Martel({
-  weight: ['200', '300', '400', '600', '700', '800', '900'],
+  weight: ['300', '400', '700', '800'],
   subsets: ['latin'],
 });
 

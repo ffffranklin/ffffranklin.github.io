@@ -3,6 +3,8 @@
 
 $content-width: 60rem;
 $base-font-size: variables.$font-size-small;
+$basic-info-font-size: 0.9rem;
+$basic-info-font-size-print: 0.75rem;
 
 @mixin uppercase-with-large-first-letter($base-font-size) {
   text-transform: uppercase;
@@ -32,7 +34,7 @@ $base-font-size: variables.$font-size-small;
     font-size: variables.$font-size-huge;
     font-weight: variables.$heading-weight-bold;
     letter-spacing: 0.03rem;
-    //color: variables.$color-font-two;
+    color: variables.$color-font-two;
   }
 
   h2 {
@@ -40,7 +42,7 @@ $base-font-size: variables.$font-size-small;
 
     font-size: $font-size;
     font-weight: global.$font-weight-normal;
-    border-bottom: 1px solid variables.$color-font-one;
+    border-bottom: 1px solid variables.$color-two;
     margin-bottom: 0;
     padding-bottom: 0;
 
@@ -102,7 +104,7 @@ $base-font-size: variables.$font-size-small;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: $base-font-size;
+    font-size: $basic-info-font-size;
     text-align: center;
     line-height: 1rem;
 
@@ -110,7 +112,7 @@ $base-font-size: variables.$font-size-small;
       display: inline-block;
       padding-right: 0.5rem;
       margin-right: 0.3rem;
-      border-right: 1px solid variables.$color-font-one;
+      border-right: 1px solid variables.$color-two;
     }
 
     li:last-child {
@@ -138,4 +140,18 @@ $base-font-size: variables.$font-size-small;
     max-width: $content-width;
     padding: 0;
   }
+
+  @media print {
+    h1 { color: variables.$color-font-one !important; }
+    h2 { border-color: variables.$color-three; }
+
+    & > ul:nth-child(2) {
+      font-size: $basic-info-font-size-print;
+
+      li {
+        border-color: variables.$color-three;
+      }
+    }
+  }
 }
+

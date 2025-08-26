@@ -6,5 +6,5 @@ export default function Phone() {
   const num = atob('NDE1LTMyMC02NjYz');
   const searchParams = useSearchParams();
 
-  return <>{searchParams?.get('phone') && num}</>;
+  return <>{searchParams?.get('personal') && <li>{num}</li>}</>;
 }
