@@ -126,6 +126,35 @@ $basic-info-font-size-print: 0.75rem;
     }
   }
 
+  //bannder
+  aside[role="banner"] {
+    background: variables.$color-two;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    color: variables.$color-font-five;
+    font-family: variables.$font-family-open-sans;
+
+    h2 {
+      margin: 0;
+      text-transform: none;
+      font-size: variables.$font-size-xxlarge;
+      font-weight: variables.$heading-weight-bold;
+      border: none;
+
+      &::first-letter{
+        font-size: inherit;
+        letter-spacing: inherit;
+      }
+    }
+
+    h3 {
+      display: initial;
+      font-weight: variables.$heading-weight-regular;
+      font-size: variables.$font-size-large;
+    }
+  }
+
   background: {
     color: #fff;
   }
@@ -151,6 +180,11 @@ $basic-info-font-size-print: 0.75rem;
       li {
         border-color: variables.$color-three;
       }
+    }
+    aside[role="banner"] {
+      color: variables.$color-font-five !important;
+      background-color: variables.$color-bg-three !important;
+      print-color-adjust: exact;
     }
   }
 }

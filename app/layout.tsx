@@ -10,7 +10,7 @@ const martel = Martel({
 });
 
 const openSans = Open_Sans({
-  weight: ['300', '400', '800'],
+  weight: ['300', '400', '700', '800'],
   subsets: ['latin'],
 });
 

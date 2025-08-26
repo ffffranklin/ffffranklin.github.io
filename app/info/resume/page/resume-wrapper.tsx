@@ -7,7 +7,7 @@ import Resume from './resume/resume';
 
 export default function ResumeWrapper() {
   const searchParams = useSearchParams();
-  const isJakeTheme = searchParams?.get('theme')?.toLowerCase() === 'jake';
+  const isOldTheme = searchParams?.get('theme')?.toLowerCase() === 'old';
 
-  return <>{(isJakeTheme && <ResumeJake />) || <Resume />}</>;
+  return <>{(isOldTheme && <Resume />) || <ResumeJake />}</>;
 }
