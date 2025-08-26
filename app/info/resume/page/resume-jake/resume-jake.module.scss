@@ -42,7 +42,7 @@ $basic-info-font-size-print: 0.75rem;
 
     font-size: $font-size;
     font-weight: global.$font-weight-normal;
-    border-bottom: 1px solid variables.$color-two;
+    border-bottom: 1px solid variables.$color-four;
     margin-bottom: 0;
     padding-bottom: 0;
 
@@ -112,7 +112,7 @@ $basic-info-font-size-print: 0.75rem;
       display: inline-block;
       padding-right: 0.5rem;
       margin-right: 0.3rem;
-      border-right: 1px solid variables.$color-two;
+      border-right: 1px solid variables.$color-four;
     }
 
     li:last-child {
@@ -126,9 +126,9 @@ $basic-info-font-size-print: 0.75rem;
     }
   }
 
-  //bannder
+  //banner
   aside[role="banner"] {
-    background: variables.$color-two;
+    background: variables.$color-bg-two;
     margin: 1rem 0;
     padding: 1rem;
     text-align: center;
