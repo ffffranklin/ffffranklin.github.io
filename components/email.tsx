@@ -7,5 +7,5 @@ export default function Phone() {
   const searchParams = useSearchParams();
   const visible = searchParams?.get('personal');
 
-  return <>{visible && <a href={`mailto:${email}`}>{email}</a>}</>;
+  return <li>{visible && <a href={`mailto:${email}`}>{email}</a>}</li>;
 }
