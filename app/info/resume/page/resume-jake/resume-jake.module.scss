@@ -89,6 +89,11 @@ $basic-info-font-size-print: 0.75rem;
     margin-right: 1rem;
   }
 
+  // expertise
+  small {
+    display: block;
+  }
+
   a {
     color: variables.$color-font-one;
     text-decoration: none;
